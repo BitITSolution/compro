@@ -25,9 +25,16 @@ class cmpInfoTableSeeder extends Seeder {
     public function run()
     {
         DB::table('cmp_info')->delete();
-        model_cmpinfo::create(['info_key' => 'NAME','info_value'=>'BITSolution']);
-        user::create(['email' => 'foo@bar.com']);
-        //model_cmpinfo::create(['info_key' => 'CITY','info_value'=>'Surabaya']);
+        DB::table('cmp_info')->insert(array(
+        ['info_key' => 'NAME','info_value'=>'BITSolution'],
+        ['info_key' => 'CITY','info_value'=>'Surabaya'],
+        ['info_key' => 'POSTAL','info_value'=>'60245'],
+        ['info_key' => 'COUNTRY','info_value'=>'Indonesia'],
+        ['info_key' => 'STATE','info_value'=>'East Java'],
+        ['info_key' => 'EMAIL','info_value'=>'admin@bitsolution.com'],
+        ['info_key' => 'PHONE','info_value'=>'0812345678'],
+        ['info_key' => 'FAX','info_value'=>'+62 31 5038767']
+        ));
     }
 
 }
