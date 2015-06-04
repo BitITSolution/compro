@@ -1,0 +1,734 @@
+*{	-webkit-transition: .7s ease-out;
+ 	-moz-transition: .7s ease-out;
+ 	-o-transition:  .7s ease-out;
+ 	transition: .7s ease-out;
+    list-style: none;
+}
+
+/*================================
+TYPOGRAPHY
+================================*/
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.8em;
+}
+
+.bigicon {font-size: 3em;}
+h1{font-size: 52px;}
+h2{font-size: 42px;}
+h3{font-size: 28px;}
+h4{font-size: 18px; line-height: 1.4em;}
+
+p{
+    letter-spacing: 1px;
+    color: #c3c3c3;
+    font-weight: lighter;
+}
+
+
+/*================================
+DEFAULT STYLE & FORMATING
+================================*/
+ul{padding: 0;}
+a{color: #ea9312}
+a:hover{color: #c3c3c3; text-decoration: none;}
+
+#services{text-align: center;}
+.col-md-4, .col-md-6{padding-bottom: 50px;}
+.col-md-3 {padding: 0;}
+
+.sectionhead{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+hr.separetor{
+    width: 80px;
+    color: #363942;
+    border-top: 2px solid #ea9312;
+}
+
+
+.btn-default{
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    margin: 50px 0;
+    color: #c3c3c3;
+    letter-spacing: 2px;
+}
+
+.btn-default:hover{
+    background: none;
+    color: #ea9312;
+}
+
+.btnicon, .brandicon{
+    margin-right: 10px;
+}
+
+
+/*================================
+HERO AREA
+================================*/
+#hero{
+    color: #fff;
+    text-align: center;
+    background: url(../img/trianglify-background.svg)no-repeat; /*your background image*/
+    max-height: 880px;
+    overflow: hidden;
+}
+
+.herocontent{
+    padding-top: 100px;
+    width: 100%;
+    max-width: 900px;
+}
+.heroshot{
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+
+}
+
+/*================================
+CLIENTS SECTION
+================================*/
+#clients{
+    padding-top: 30px;
+}
+#clients h4{
+    text-transooteorm: uppercase;
+    padding-top: 10px;
+}
+
+#clients .col-md-4{
+    padding-bottom: 0;
+}
+
+#clients ul{float: right}
+
+#clients li{
+    display: inline;
+    margin-right: 35px;
+}
+
+#clients li:last-child{
+    margin-right: 0px;
+}
+
+
+/*================================
+ABOUT SECTION
+================================*/
+#about{padding-top: 100px;}
+
+.myapps{margin-top: 25px;}
+.myapps li{display: inline}
+.myapps li img{
+    width: 30px;
+}
+
+/*================================
+PORTFOLIO SECTION
+================================*/
+#portfolio{
+    background: #efefef;
+    margin-top: 50px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#shotsByPlayerId li{
+    width: 31%;
+    float: left;
+    padding: 15px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#shotsByPlayerId li:hover{
+    box-shadow: 1px 2px 25px rgba(160, 160, 160, 0.4);
+    -webkit-transition: .7s ease-out;
+ 	-moz-transition: .7s ease-out;
+ 	-o-transition:  .7s ease-out;
+ 	transition: .7s ease-out;
+}
+
+#shotsByPlayerId li img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+#shotsByPlayerId img:hover{
+    opacity: .5;
+    overflow: hidden;
+}
+
+#shotsByPlayerId a:hover{color: #ea9312;}
+
+#shotsByPlayerId h3{
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: normal;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;}
+
+#shotsByPlayerId h3 a{color: #363942;}
+
+.likecount a{float: left; color: #c3c3c3;}
+.commentcount a{float: right; color: #c3c3c3;}
+
+/*================================
+TESTIMONIAL SECTION
+================================*/
+
+.clientsphoto img{
+    width: 80px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.clientsphoto img:hover{
+    border-radius: 15%;
+}
+
+blockquote{
+    margin: 0;
+    padding: 0 0 10px 0;
+    border: none;
+}
+
+blockquote p{   
+    font-style: italic;
+    font-size: 14px;
+}
+
+.quote{overflow: hidden}
+.quote h5{margin-bottom: 5px;}
+
+
+/*================================
+FOOTER SECTION
+================================*/
+
+footer{
+    text-align: center;
+    padding: 50px 0;
+    background: #363942;
+}
+
+footer p, footer .bigicon {color: #7e7e7e;}
+
+.footerlinks{margin: 30px 0;}
+.footerlinks li{
+    display: inline;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.footersocial {margin-top: 30px;}
+
+.footersocial li{
+    display:inline;
+    padding: 0 15px;
+    font-size: 2em;
+}
+
+.footersocial li a {color: #7e7e7e;}
+.footersocial li a:hover {color: #ea9312;}
+
+/*================================
+FOLLOW BUTTON
+================================*/
+.dribbble-follow-button {
+	display: inline-block;
+    margin-top: 15px;
+}
+
+.dribbble-follow-button .label, .dribbble-follow-button .count {
+    font: bold 11px/18px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    border-radius: 3px;
+}
+
+.dribbble-follow-button .label {
+    padding: 0 3px 0 1px;
+    white-space: nowrap;
+    background: #e3e3e3;
+    background: linear-gradient(top, white, #dedede);
+}
+
+.dribbble-follow-button .label i {
+    height: 18px;
+    width: 18px;
+    float: left;
+    background: url(../img/icon.png) no-repeat top left;
+}
+
+.dribbble-follow-button .label:hover {
+    border-color: #bbb;
+    background: #fff;
+    color: #333;
+}
+
+.dribbble-follow-button .label:active {            
+     box-shadow: 0 1px 5px rgba(0,0,0,.15) inset;
+}
+
+.dribbble-follow-button .count {
+    margin-left: 5px;
+    padding: 0 3px;
+    color: #333;
+    border-color: #bbb;
+    font-weight: normal;
+    background: white;
+}
+
+.dribbble-follow-button .count:hover {
+    text-decoration: underline;
+}
+
+.dribbble-follow-button .count > * {
+	top: 50%;
+	left: 0;
+	margin: -4px 0 0 -4px;
+	border: 4px solid transparent;
+	border-right-color: #aaa;
+	border-left: 0;
+	position: absolute;
+}
+
+.dribbble-follow-button .count u {
+    margin-left: -3px;
+    border-right-color: white;
+}
+
+
+/*================================
+DIAMOND BUTTON
+================================*/
+.diamonddark{
+  margin:50px;
+  width:120px;
+  height:120px;
+  background:black;
+  transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  position:relative;
+  cursor: pointer;
+}
+.diamondorange:hover {
+    box-shadow: inset 200px 0 0 0 #ffb300;
+}
+.diamondblue:hover {
+    box-shadow: inset 0 200px 0 0 #14a9ca;
+}
+.diamondgreen:hover {
+    box-shadow: inset 200px 0 0 0 #7de149;
+}
+.diamondred:hover {
+    box-shadow: inset 200px 0 0 0 #ec174b;
+}
+.diamondpurple:hover {
+    box-shadow: inset 0 200px 0 0 #711772;
+}
+.diamond-innerdark{
+  color:black;
+  transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  position:absolute;
+  left:2px;
+  top:23px;
+}
+.diamondlight{
+  margin:50px;
+  width:120px;
+  height:120px;
+  background:#fff;
+  border:2px solid black;
+  transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  position:relative;
+  cursor: pointer;
+}
+.diamond-innerlight{
+  color:#fff;
+  transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  position:absolute;
+  left:2px;
+  top:23px;
+}
+
+/*================================
+CUBE
+================================*/
+.wrap {
+    perspective: 800px;
+    perspective-origin: 50% 100px;
+}
+.cube {
+    position: relative;
+    width: 150px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.cube div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+}
+.back:hover {
+    background: #fea3aa;
+    color: black;
+    z-index:20;
+}
+.front:hover {
+    background: #f8b88b;
+    color: black;
+    z-index:20;
+}
+.bottom:hover {
+    background: #faf884;
+    color: black;
+    z-index:20;
+}
+.left:hover {
+    background: #baed91;
+    color: black;
+    z-index:20;
+}
+.top:hover {
+    background: #b2cefe;
+    color: black;
+    z-index:20;
+}
+.right:hover {
+    background: #d4a2f2;
+    color: black;
+    z-index:20;
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+.right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+}
+.topleft {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+}
+.left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+}
+.top {
+    transform: rotateX(-90deg) translateY(-50px);
+    transform-origin: top center;
+}
+.bottom {
+    transform: rotateX(90deg) translateY(50px);
+    transform-origin: bottom center;
+}
+.front {
+    transform: translateZ(50px);
+}
+@keyframes spin {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+.cube {
+    animation: spin 10s infinite linear;
+}
+.cube:hover {
+    animation: pause !important;
+}
+
+
+.cube:hover .front {
+    transform: rotateX(0deg) translateX(0px) translateY(-30px);
+    transform-origin: top center;
+    width:150px;
+    height:86px;         
+    -webkit-background-size: auto 173px;                            
+    -moz-background-size: auto 173px;                           
+    -ms-background-size: auto 173px;                            
+    -o-background-size: auto 173px;                         
+    position: relative;
+    float:left;
+    margin:1px 5px;
+    text-align:center;
+    zoom:1;
+}
+.cube:hover .topleft {
+    transform: rotateX(0deg) translateX(0px) translateY(-30px);
+    transform-origin: top center;
+    width:150px;
+    height:86px;
+    -webkit-background-size: auto 173px;                            
+    -moz-background-size: auto 173px;                           
+    -ms-background-size: auto 173px;                            
+    -o-background-size: auto 173px;                         
+    position: relative;
+    float:left;
+    margin:1px 5px;
+    text-align:center;
+    zoom:1;
+
+}
+.cube:hover .top {
+    transform: rotateX(0deg) translateX(0px) translateY(-30px);
+    transform-origin: top center;
+    width:150px;
+    height:86px;         
+    -webkit-background-size: auto 173px;                            
+    -moz-background-size: auto 173px;                           
+    -ms-background-size: auto 173px;                            
+    -o-background-size: auto 173px;                         
+    position: relative;
+    float:left;
+    margin:1px 5px;
+    text-align:center;
+    zoom:1;
+}
+.cube:hover .bottom {
+    transform: rotateX(0deg) translateX(100px) translateY(-340px);
+    transform-origin: top center;
+    width:150px;
+    height:86px;         
+    -webkit-background-size: auto 173px;                            
+    -moz-background-size: auto 173px;                           
+    -ms-background-size: auto 173px;                            
+    -o-background-size: auto 173px;                         
+    position: relative;
+    float:left;
+    margin:1px 5px;
+    text-align:center;
+    zoom:1;
+}
+.cube:hover .left {
+    transform: rotateX(0deg) translateX(100px) translateY(-340px);
+    transform-origin: top center;
+    width:150px;
+    height:86px;         
+    -webkit-background-size: auto 173px;                            
+    -moz-background-size: auto 173px;                           
+    -ms-background-size: auto 173px;                            
+    -o-background-size: auto 173px;                         
+    position: relative;
+    float:left;
+    margin:1px 5px;
+    text-align:center;
+    zoom:1;
+}
+.cube:hover .right {
+    transform: rotateX(0deg) translateX(-100px) translateY(-590px);
+    transform-origin: top center;
+    width:150px;
+    height:86px;         
+    -webkit-background-size: auto 173px;                            
+    -moz-background-size: auto 173px;                           
+    -ms-background-size: auto 173px;                            
+    -o-background-size: auto 173px;                         
+    position: relative;
+    float:left;
+    margin:1px 5px;
+    text-align:center;
+    zoom:1;
+}
+.cube:hover .back {
+    transform: rotateX(0deg) translateX(-100px) translateY(-590px);
+    transform-origin: top center;
+    width:150px;
+    height:86px;         
+    -webkit-background-size: auto 173px;                            
+    -moz-background-size: auto 173px;                           
+    -ms-background-size: auto 173px;                            
+    -o-background-size: auto 173px;                         
+    position: relative;
+    float:left;
+    margin:1px 5px;
+    text-align:center;
+    zoom:1;
+}
+
+.wrap:hover .cube{
+    animation: pause !important;
+}
+
+
+
+/*================================
+HEXAGON
+================================*/
+.hex .corner-1,
+.hex .corner-2 {
+    border:none;
+}
+
+.cube:hover .hex {
+    width:140px;
+    height:76px;
+    -webkit-background-size: auto 173px;                            
+    -moz-background-size: auto 173px;                           
+    -ms-background-size: auto 173px;                            
+    -o-background-size: auto 173px;                         
+    position: relative;
+    float:left;
+    margin:25px 5px;
+    text-align:center;
+    zoom:1;
+    border-top:none;
+    border-bottom:none;
+}
+        
+.cube:hover .hex.hex-gap {
+    margin-left: 86px;
+}
+
+
+.cube:hover .hex a {
+    display:block;
+    width: 100%;
+    height:100%;
+    text-indent:-9999em;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.cube:hover .hex .corner-1,
+.cube:hover .hex .corner-2 {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: inherit;                                
+    z-index:-2;                     
+    overflow:hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;         
+    backface-visibility: hidden;  
+    border-left:1px solid black;
+    border-right:1px solid black;          
+}
+
+.cube:hover .hex .corner-1 {
+    z-index:-1;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.cube:hover .hex .corner-2 {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.cube:hover .hex .corner-1:before,
+.cube:hover .hex .corner-2:before {
+    width: 173px;
+    height: 173px;
+  content: '';
+  position: absolute;
+  background: inherit;
+  top:0;
+  left: 0;
+  z-index: 1;
+  background: inherit;
+  background-repeat:no-repeat;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden; 
+    backface-visibility: hidden;                  
+}           
+
+
+.cube:hover .hex .corner-1:before {
+    -webkit-transform: rotate(-60deg) translate(-87px, 0px);
+    -moz-transform: rotate(-60deg) translate(-87px, 0px);
+    -ms-transform: rotate(-60deg) translate(-87px, 0px);
+    -o-transform: rotate(-60deg) translate(-87px, 0px);
+    transform: rotate(-60deg) translate(-87px, 0px);    
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+}           
+
+.cube:hover .hex .corner-2:before {
+    -webkit-transform: rotate(60deg) translate(-48px, -11px);
+    -moz-transform: rotate(60deg) translate(-48px, -11px);
+    -ms-transform: rotate(60deg) translate(-48px, -11px);
+    -o-transform: rotate(60deg) translate(-48px, -11px);
+    transform: rotate(60deg) translate(-48px, -11px);   
+    bottom:0;
+}       
+
+
+
+/* Custom styles*/
+.cube:hover .hex .inner {       
+    color:#eee;
+}
+
+.cube:hover .hex h4 {
+    font-family: 'Josefin Sans', sans-serif;        
+    margin:0;           
+}
+
+.cube:hover .hex hr {
+    border:0;
+    border-top:1px solid #eee;
+    width:60%;
+    margin:15px auto;
+}
+
+.cube:hover .hex p {
+    font-size:16px;
+    font-family: 'Kotta One', serif;
+    width:80%;
+    margin:0 auto;
+}
+
+.cube:hover .hex.hex-1 {
+    background: #74cddb;
+}
+
+.cube:hover .hex.hex-2 {
+    background: #f5c53c;
+}
+
+.cube:hover .hex.hex-3 {
+    background: #80b971;
+}

@@ -17,7 +17,7 @@ class controller_index extends Controller {
 	{
 		//
     $param["data"] = model_cmpinfo::all();
-    return view('view_index',$param);
+    return view('view_homepage',$param);
 	}
 
 	/**
