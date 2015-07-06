@@ -25,6 +25,7 @@ class RouteServiceProvider extends ServiceProvider {
 		//
 		
 		parent::boot($router);
+		$router->bind('tes','1');
 	}
 
 	/**

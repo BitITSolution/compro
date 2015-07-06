@@ -1,5 +1,6 @@
 <?php namespace App\Providers;
 
+use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
@@ -9,9 +10,9 @@ class AppServiceProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function boot()
+	public function boot(Router $router)
 	{
-		//
+		$router->bind('tes','1');
 	}
 
 	/**

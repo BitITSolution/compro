@@ -1,23 +1,29 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+	/*
+	|--------------------------------------------------------------------------
+	| Application Routes
+	|--------------------------------------------------------------------------
+	|
+	| Here is where you can register all of the routes for an application.
+	| It's a breeze. Simply tell Laravel the URIs it should respond to
+	| and give it the controller to call when that URI is requested.
+	|
+	*/
 
-//Route::get('/', 'WelcomeController@index');
-Route::get('/', 'controller_index@index');
+	#region Backend
+		Route::get('/backend/login', 'Backend\controller_auth@index');
+		Route::post('/backend/login', 'Backend\controller_auth@login');
+		Route::get('/backend/home', 'Backend\controller_home@index');
+	#endregion
 
-Route::get('home', 'HomeController@index');
+	Route::get('/', 'controller_index@index');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+	Route::get('home', 'HomeController@index');
+
+
+	Route::controllers([
+		'auth' => 'Auth\AuthController',
+		'password' => 'Auth\PasswordController',
+	]);
 
