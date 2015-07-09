@@ -17,6 +17,12 @@
 		Route::get('/backend/home', 'Backend\controller_home@index');
 	#endregion
 
+	#region Backend.compro
+		Route::get('/backend/compro', 'Backend\controller_compro@index');
+		Route::get('/backend/compro/getEditorData', 'Backend\controller_compro@getEditorData');
+		Route::post('/backend/compro/getEditorData', 'Backend\controller_compro@getEditorData');
+	#endregion
+
 	Route::get('/', 'controller_index@index');
 
 	Route::get('home', 'HomeController@index');

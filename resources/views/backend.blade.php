@@ -7,7 +7,7 @@
 	<title>Laravel</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-
+	<link href="{{ asset('/css/main.css') }}" rel="stylesheet">
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
@@ -31,35 +31,53 @@
 				<a class="navbar-brand" href="#">Bits Backend</a>
 			</div>
 
-            @if( 1 == 2 )
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/') }}">Home</a></li>
-                    </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/auth/login') }}">Login</a></li>
-                            <li><a href="{{ url('/auth/register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
-			@endif
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/backend/home') }}">Home</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Master<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{url('/backend/compro')}}">Company Profile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/auth/login') }}">Login</a></li>
+                        <li><a href="{{ url('/auth/register') }}">Register</a></li>
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome, {{ Auth::user()->name }} <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
+            </div>
 
 		</div>
 	</nav>
-    {{ $tes }}
-	@yield('content')
 
 	<!-- Scripts -->
+	{!! Html::style('js/DataTable/media/css/font-awesome.min.css') !!}
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	{!! Html::style('js/DataTable/media/css/jquery.dataTables.min.css') !!}
+	{!! Html::style('js/DataTable/media/css/dataTables.tableTools.css') !!}
+	{!! Html::style('js/DataTable/media/css/dataTables.editor.min.css') !!}
+
+	{!! Html::script('js/DataTable/media/js/jquery.dataTables.min.js'); !!}
+	{!! Html::script('js/DataTable/media/js/dataTables.tableTools.min.js'); !!}
+	{!! Html::script('js/DataTable/media/js/dataTables.editor.min.js'); !!}
+
+	@yield('content')
+	@yield('page-script')
+
 </body>
 </html>

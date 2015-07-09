@@ -17,7 +17,7 @@ class ViewComposerServiceProvider extends ServiceProvider {
 
 	public function getDetailAuth()
 	{
-		view()->composer('backend/',function($view){
+		view()->composer(['backend','backend.*'],function($view){
 
 			$auth = null;
 			if( Auth::check() )
@@ -26,7 +26,8 @@ class ViewComposerServiceProvider extends ServiceProvider {
 			}
 
 			$view->with([
-					'auth'	=>	$auth
+					'auth'	=>	$auth,
+					'tes'	=> '1'
 				]);
 
 		});

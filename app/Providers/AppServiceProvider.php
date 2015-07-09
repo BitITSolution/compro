@@ -13,6 +13,10 @@ class AppServiceProvider extends ServiceProvider {
 	public function boot(Router $router)
 	{
 		$router->bind('tes','1');
+		view()->composer('backend', function($view)
+			{
+				$view->with('tes', 'myvariable');
+			});
 	}
 
 	/**
