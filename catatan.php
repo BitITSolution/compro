@@ -226,11 +226,86 @@
 	#endregion
 
 	#region Migration
+		//region --Create
+		Schema::create($table, function($table){});
+		//endregion
+
+		//region --Rename
+		Schema::create($from,$to);
+		//endregion
+
+		//region --Drop
+		Schema::dropIfExists($table);
+		//endregion
+
+		//region --Edit
+		Schema::table('users', function($table){});
+		//endregion
+
+		//region --Command
+		$table->bigIncrements('id'); 	Incrementing ID using a "big integer" equivalent
+		$table->bigInteger('votes'); 	BIGINT equivalent to the table
+		$table->binary('data'); 	BLOB equivalent to the table
+		$table->boolean('confirmed'); 	BOOLEAN equivalent to the table
+		$table->char('name', 4); 	CHAR equivalent with a length
+		$table->date('created_at'); 	DATE equivalent to the table
+		$table->dateTime('created_at'); 	DATETIME equivalent to the table
+		$table->decimal('amount', 5, 2); 	DECIMAL equivalent with a precision and scale
+		$table->double('column', 15, 8); 	DOUBLE equivalent with precision, 15 digits in total and 8 after the decimal point
+		$table->enum('choices', ['foo', 'bar']); 	ENUM equivalent to the table
+		$table->float('amount'); 	FLOAT equivalent to the table
+		$table->increments('id'); 	Incrementing ID to the table (primary key)
+		$table->integer('votes'); 	INTEGER equivalent to the table
+		$table->json('options'); 	JSON equivalent to the table
+		$table->jsonb('options'); 	JSONB equivalent to the table
+		$table->longText('description'); 	LONGTEXT equivalent to the table
+		$table->mediumInteger('numbers'); 	MEDIUMINT equivalent to the table
+		$table->mediumText('description'); 	MEDIUMTEXT equivalent to the table
+		$table->morphs('taggable'); 	Adds INTEGER taggable_id and STRING taggable_type
+		$table->nullableTimestamps(); 	Same as timestamps(), except allows NULLs
+		$table->smallInteger('votes'); 	SMALLINT equivalent to the table
+		$table->tinyInteger('numbers'); 	TINYINT equivalent to the table
+		$table->softDeletes(); 	Adds deleted_at column for soft deletes
+		$table->string('email'); 	VARCHAR equivalent column
+		$table->string('name', 100); 	VARCHAR equivalent with a length
+		$table->text('description'); 	TEXT equivalent to the table
+		$table->time('sunrise'); 	TIME equivalent to the table
+		$table->timestamp('added_on'); 	TIMESTAMP equivalent to the table
+		$table->timestamps(); 	Adds created_at and updated_at columns
+		$table->rememberToken(); 	Adds remember_token as VARCHAR(100) NULL
+		->nullable() 	Designate that the column allows NULL values
+		->default($value) 	Declare a default value for a column
+		->unsigned() 	Set INTEGER to UNSIGNED
+	//endregion
+
+		//region --Change column
+		$table->string('name', 50)->change();
+		//endregion
+
+		//region --Rename column
+		$table->renameColumn('from', 'to');
+		//endregion
+
+		//region --Drop column
+		$table->dropColumn(['votes', 'avatar', 'location']);
+		//endregion
+
+		//region --Primary,unique,index
+		$table->primary('id'); 	Adding a primary key
+		$table->primary(['first', 'last']); 	Adding composite keys
+		$table->unique('email'); 	Adding a unique index
+		$table->index('state'); 	Adding a basic index
+		//endregion
+
+		//region --Foreign Key
 		$table->integer('user_id')->unsigned();
-		$table	->foreign('user_id')
-				->references('id')
-				->on('users')
-				->onDelete('cascade');
+				$table	->foreign('user_id')
+					->references('id')
+					->on('users')
+					->onDelete('cascade');
+		//endregion
+
+		
 	#endregion
 
 	#region Request
