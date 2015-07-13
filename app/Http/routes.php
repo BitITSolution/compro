@@ -23,6 +23,11 @@
 		Route::post('/backend/compro/getEditorData', 'Backend\controller_compro@getEditorData');
 	#endregion
 
+	#region Message (Project Planner & Message us)
+		Route::get('/message/projectPlanner', 'controller_message@projectPlanner');
+		Route::post('/message/projectPlanner', 'controller_message@submitProjectPlanner');
+	#endregion
+
 	Route::get('/', 'controller_index@index');
 
 	Route::get('home', 'HomeController@index');

@@ -15,6 +15,7 @@ return array(
     'CreateModelPortfolio' => $baseDir . '/database/migrations/2015_07_13_014710_create_model_portfolio.php',
     'CreateModelPortfolioImage' => $baseDir . '/database/migrations/2015_07_13_014748_create_model_portfolioImage.php',
     'CreateModelProjectType' => $baseDir . '/database/migrations/2015_07_13_013504_create_model_projectType.php',
+    'CreateModelProjectTypesTable' => $baseDir . '/database/migrations/2015_07_13_040748_create_model_project_types_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
