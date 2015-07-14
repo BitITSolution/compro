@@ -31,6 +31,7 @@
 	Route::get('/', 'controller_index@index');
 
 	Route::get('home', 'HomeController@index');
+	Route::get('contactus', 'controller_contactus@index');
 
 
 	Route::controllers([
