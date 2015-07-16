@@ -28,6 +28,13 @@
 		Route::post('/message/projectPlanner', 'controller_message@submitProjectPlanner');
 	#endregion
 
+	#region Backend.portfolio
+		Route::get('/backend/portfolio', 'Backend\controller_portfolio@index');
+		Route::get('/backend/portfolio/getEditorData', 'Backend\controller_portfolio@getEditorData');
+		Route::post('/backend/portfolio/getEditorData', 'Backend\controller_portfolio@getEditorData');
+		Route::post('/backend/portfolio/testing', 'Backend\controller_portfolio@testing');
+	#endregion
+
 	Route::get('/', 'controller_index@index');
 
 	Route::get('home', 'HomeController@index');

@@ -42,6 +42,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Master<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{url('/backend/compro')}}">Company Profile</a></li>
+                            <li><a href="{{url('/backend/portfolio')}}">Portfolio</a></li>
                         </ul>
                     </li>
                 </ul>
