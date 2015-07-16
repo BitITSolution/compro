@@ -1,38 +1,36 @@
 @extends('backend')
 
-
-
 @section('content')
-<div class="row">
-    <div class="col-md-10 col-md-offset-1">
-        <h3>Company Profile</h3>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h3>
+                Portfolio
+                <form method="post" action="portfolio/testing" enctype="multipart/form-data">
+                    <input name="_token" type="hidden" value="{{{ csrf_token() }}}"/>
+                    <input type="file" name="files[]" id="files[]"/>
+                    <input type="submit" />
+                </form>
+            </h3>
+        </div>
     </div>
-</div>
-<div class="row">
-	<div class="col-md-10 col-md-offset-1">
-		<table id="table_cmpInfo" style="width:100%" class="table table-striped table-bordered dataTable table-hover no-footer">
-			<thead>
-				<tr>
-					<th style="width:10px;"></th>
-					<th style="width: 110px;">Action</th>
-					<th>Info Key</th>
-					<th>Info Value
-					</th>
-				</tr>
-			</thead>
-			{{--<tbody>
-				@foreach($model_cmpInfo as $cmpInfo)
-					<tr>
-						<td>{!! $cmpInfo['info_key'] !!}</td>
-						<td>{!! $cmpInfo['info_value'] !!}</td>
-					</tr>
-				@endforeach
-			</tbody>--}}
-		</table>
-	</div>
-</div>
-
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <table id="table_portfolio" style="width:100%" class="table table-striped table-bordered dataTable table-hover no-footer">
+                <thead>
+                    <tr>
+                        <th style="width:10px;"></th>
+                        <th style="width: 110px;">Action</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
 @endsection
+
+
 
 
 @section('page-script')
@@ -62,22 +60,65 @@
 
 		var editor; // use a global for the submit and return data rendering in the examples
 
+        // Our custom field type
+        $.fn.dataTable.Editor.fieldTypes.upload = $.extend( true, {}, $.fn.dataTable.Editor.models.fieldType, {
+            "create": function ( conf ) {
+                var that = this;
+
+                // Create the elements to use for the input
+                conf._input = $(
+                    '<input type="file" name="files[]" id="files[]"/>')[0];
+
+                return conf._input;
+            }
+
+            /*"get": function ( conf ) {
+                return $('button.selected', conf._input).attr('value');
+            },
+
+            "set": function ( conf, val ) {
+                $('button.selected', conf._input).removeClass( 'selected' );
+                $('button.inputButton[value='+val+']', conf._input).addClass('selected');
+            },
+
+            "enable": function ( conf ) {
+                conf._enabled = true;
+                $(conf._input).removeClass( 'disabled' );
+            },
+
+            "disable": function ( conf ) {
+                conf._enabled = false;
+                $(conf._input).addClass( 'disabled' );
+            }*/
+        } );
+
 		$(document).ready(function() {
+
 			editor = new $.fn.dataTable.Editor( {
 				"ajax": {
                             type: "POST",
                             data: { '_token' : '{{{ csrf_token() }}}' },
-                            url : "compro/getEditorData"
+                            url : "portfolio/testing",
+                            data: (new FormData($(this)[0])),
+                            async: false,
+                            cache: false,
+                            contentType: false,
+                            processData: false
                          },
-				table: "#table_cmpInfo",
+				table: "#table_portfolio",
 				fields: [
 					{
-						label: "Info Key:",
-						name: "info_key"
+						label: "Name:",
+						name: "portfolio.name"
 					},
 					{
-						label: "Info Value:",
-						name: "info_value"
+						label: "Description:",
+						name: "portfolio.description"
+					},
+					{
+						label: "Upload Image :",
+						name: "files",
+						type: "upload"
 					}
 				]
 			} );
@@ -117,13 +158,13 @@
 					$(document).off( 'keydown.editor' );
 				} );
 
-			$('#table_cmpInfo').on( 'click', 'tbody td:nth-child(n+3)', function (e) {
+			$('#table_portfolio').on( 'click', 'tbody td:nth-child(n+3)', function (e) {
 				editor.inline( this, {
 					submitOnBlur: true
 				} );
 			} );
 
-            $('#table_cmpInfo').on('click', 'a.editor_edit', function (e) {
+            $('#table_portfolio').on('click', 'a.editor_edit', function (e) {
                 e.preventDefault();
 
                 editor.edit( $(this).closest('tr'), {
@@ -133,7 +174,7 @@
             } );
 
             //region Delete record
-            $('#table_cmpInfo').on('click', 'a.editor_remove', function (e) {
+            $('#table_portfolio').on('click', 'a.editor_remove', function (e) {
                 e.preventDefault();
 
                 editor.remove( $(this).closest('tr'), {
@@ -144,12 +185,12 @@
             } );
             //endregion
 
-			var table = $('#table_cmpInfo').DataTable( {
+			var table = $('#table_portfolio').DataTable( {
 				dom: "Tfrtip",
 				"ajax": {
                             type: "POST",
                             data: { '_token' : '{{{ csrf_token() }}}' },
-                            url : "compro/getEditorData"
+                            url : "portfolio/getEditorData"
                          },
 				"aaSorting": [],
 				columns: [
@@ -164,8 +205,8 @@
 						                  '<a href="" class="editor_remove"><div class="btn-group" style="margin-left: 5px;"><button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span><span class="hidden-xs" style="margin-left: 5px;">Delete</span></button></div></a>',
 						orderable       : false
 					},
-					{ data              : "info_key" },
-					{ data              : "info_value" }
+					{ data              : "portfolio.name" },
+					{ data              : "portfolio.description" }
 				],
 				tableTools: {
 					sRowSelect: "os",
