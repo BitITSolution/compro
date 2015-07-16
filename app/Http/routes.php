@@ -32,6 +32,7 @@
 
 	Route::get('home', 'HomeController@index');
 	Route::get('contactus', 'controller_contactus@index');
+	Route::get('portfolio', 'controller_portfolio@index');
 
 
 	Route::controllers([

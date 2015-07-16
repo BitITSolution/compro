@@ -67,73 +67,78 @@
     <!-- Analytics end-->
   
    </head>
-    <body data-spy="scroll" style="background:url('./img/tes.png');">
+    <body data-spy="scroll" style="background:url('./img/maze.png');">
         <!-- Preloader -->
         <div id="preloader">           
             <div id="status">
-                <div class="loadicon icon-puzzle wow tada infinite" data-wow-duration="8s"></div>
+                <div class="wow tada infinite" data-wow-duration="5s">BIT</div>
             </div>
         </div>
         
         <div id="about" class="container">
-        
-        <!-- Home -->
-         <div class="col-md-12">
-          <div class="col-md-6" style="z-index:10;">
-           
-            <h1 class="wow swing myphoto " data-wow-duration="4s">
-              <br>BITSolution 
+          <center>
+            <div class="nav">
+              <ul>
+                <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
+                <li class="tutorials" onclick="rotatePage('bitsolution')"><a href="#">BITSolution</a></li>
+                <li class="about" onclick="rotatePage('product')"><a href="#">Product</a></li>
+                <li class="news" onclick="rotatePage('portfolio')"><a href="#">Portfolio</a></li>
+                <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
+                <li class="contact"><a class="active" href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <br><br>
+
+
+            <div class="col-md-6">
+            <div class="wow fadeInLeft"  data-wow-duration="3s">
+            <h1>
+              <br><strong>BIT</strong>Solution 
             </h1>
                <br>
-            <h2 class="wow bounceIn"  data-wow-duration="4s">
-              <blockquote class="pull-right">
-         <p style="color:black;">The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
-         <small>by <cite>Albert Einstein</cite></small>
-        </blockquote>
-             </h2>
+                    
+                 <h4>
+                    enquiries@bitsolution.com
+                    <br><br>
+                    Ngagel Jaya Tengah 73-77
+                    <br>
+                    Surabaya, Indonesia
+                    <br><br>
+                    <b>+621234567890<b>
+                    <br><br><br>
+                     <img src = "./img/fb.png" width="40px" class="iconhover">
+                     <img src = "./img/twitter.png" width="40px" class="iconhover">
+                     <img src = "./img/google.png" width="40px" class="iconhover">
+                     <img src = "./img/ig.png" width="40px" class="iconhover">
+                 </h4>
+                </div>
+            
             
           </div>
 
-          <div class="col-md-4 col-md-offset-1 wow rotateIn" id="wrapcube" data-wow-duration="3s" style="text-align:center;">
-           <br><br><br><br><br>
-            <center>
-            <div class="wrap">
-          <div class="cube">
-            <div class="front hex"><br>HOME
-              <div class="corner-1"></div>
-              <div class="corner-2"></div>
-            </div>
-            <div class="topleft hex">
-              <div class="corner-1"></div>
-              <div class="corner-2"></div>
-            </div>
-            <div class="top hex"><br>PORTOFOLIO
-              <div class="corner-1"></div>
-              <div class="corner-2"></div>
-            </div>
-            <div class="bottom hex"><br>BITSolution
-              <div class="corner-1"></div>
-              <div class="corner-2"></div>
-            </div>
-            <div class="left hex"><br>CONTACT US
-              <div class="corner-1"></div>
-              <div class="corner-2"></div>
-            </div>
-            <div class="back hex"><br>PRODUCT
-              <div class="corner-1"></div>
-              <div class="corner-2"></div>
-            </div>
-            <div class="right hex"><br>CLIENT
-              <div class="corner-1"></div>
-              <div class="corner-2"></div>
-            </div>
-          </div>
+
+            <div class="col-md-6">
+            <br>
+              <h3 class="wow fadeInLeft" data-wow-duration="3s">
+                Let Us Know What's in Your Mind
+                  <br><br>
+              </h3>
+              <div class="wow fadeInLeft" data-wow-duration="3s">
+                  <form class="form-horizontal tasi-form" action="control/insertbrand.php" method="post" enctype="multipart/form-data">
+                    <input type="text" placeholder="Name" class="inputcontact">
+                    <input type="text" placeholder="Phone" class="inputcontact">
+                      <br>
+                    <input type="text" placeholder="Email" class="inputcontact" style="width:84%;">
+                      <br>
+                    <textarea placeholder="Fill Me" class="inputcontact" style="width:84%;height:150px;resize:none;"></textarea>
+                    <input type="submit" value="Send" class="buttoncontact" style="width:84%;">
+                  </form>
+              </div>
+            </div><!-- Home SECTION END -->
+          </center>
         </div>
-        </center>
-          </div>
-       </div><!-- Home SECTION END -->
           
-      <hr><!-- SECTION SEPARETOR LINE -->     
+     
         
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -148,5 +153,20 @@
     <script src="js/drifolio.js"></script>
     <script src="js/wow.min.js"></script>
     <script>new WOW().init();</script>    
+
+    <script type="text/javascript">
+        var timer = 0;
+        setInterval(function() {
+            timer++;
+        }, 10); // every 5 sec
+
+        function rotatePage(x){
+            $("html").addClass("rotate360cw");
+            setInterval(function() {
+                window.location = x + "";
+            }, 300); // every 5 sec
+        }
+            
+    </script>
   </body>
 </html>

@@ -122,7 +122,7 @@ CLIENTS SECTION
 /*================================
 ABOUT SECTION
 ================================*/
-#about{padding-top: 100px;}
+#about{padding-top: 50px;}
 
 .myapps{margin-top: 25px;}
 .myapps li{display: inline}
@@ -649,3 +649,121 @@ HEXAGON
   left: 0;
   z-index: 1;               
 }           
+
+
+.rotate360cw {
+    transform: scale(0.8) translate(0px,-25px);
+    -webkit-transform: scale(0.8) translate(0px,-25px);
+    -o-transform: scale(0.8) translate(0px,-25px); 
+    -moz-transform: scale(0.8) translate(0px,-25px);
+
+     filter: alpha(opacity=0);
+        opacity: 0;
+
+    -webkit-transition: all 0.7s linear;
+    -moz-transition:all 0.7s linear;
+    -ms-transition:all 0.7s linear;
+}
+
+.zoomOutanimation {
+    transform: scale(0) translate(0px,-25px);
+    -webkit-transform: scale(0) translate(0px,-25px);
+    -o-transform: scale(0) translate(0px,-25px);
+    -moz-transform: scale(0) translate(0px,-25px);
+
+     filter: alpha(opacity=0);
+        opacity: 0;
+
+    -webkit-transition: all 0.1s linear;
+    -moz-transition:all 0.1s linear;
+    -ms-transition:all 0.1s linear;
+}
+
+
+/*================================
+CONTACT
+================================*/
+.iconhover{
+    opacity: 0.4;
+    cursor:pointer;
+    -webkit-transition: all 0.4s linear;
+}
+
+.iconhover:hover{
+    opacity: 1;
+}
+
+.inputcontact{
+    padding:10px;
+    margin:5px;
+    min-width: 40.7%;
+}
+
+
+.buttoncontact{
+    padding:10px;
+    margin:5px;
+    min-width: 220px;
+    background: #808080;
+    color: #fff;
+}
+
+.nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: #000;
+  color:#fff;
+  border: 1px solid #000;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  border:1px solid black;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+ 
+  /* Options 2 - Float
+  .nav li {
+    float: left;
+  }
+  .nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  .nav {
+    background-color: #444;
+  }
+  */
+}
