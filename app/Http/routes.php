@@ -30,15 +30,10 @@
 
 	Route::get('home', 'HomeController@index');
 
-	/*Route::get('/', 'controller_index@index');
+	Route::get('/', 'controller_index@index');
 	Route::get('index', 'controller_index@index');
 	Route::get('contactus', 'controller_contactus@index');
-	Route::get('portfolio', 'controller_portfolio@index');*/
-
-	Route::get('/', 'controller_BIT@index');
-	Route::get('index', 'controller_BIT@index');
-	Route::get('contactus', 'controller_BIT@contactus');
-	Route::get('portfolio', 'controller_BIT@portfolio');
+	Route::get('portfolio', 'controller_portfolio@index');
 
 
 	Route::controllers([
