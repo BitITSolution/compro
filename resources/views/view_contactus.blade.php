@@ -137,9 +137,11 @@
             </div><!-- Home SECTION END -->
           </center>
         </div>
-          
-     
         
+        @include('frontend.footer')
+  </body>
+</html>     
+    
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-latest.min.js"></script>
@@ -168,5 +170,3 @@
         }
             
     </script>
-  </body>
-</html>

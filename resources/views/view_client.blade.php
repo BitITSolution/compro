@@ -81,8 +81,8 @@
               <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
               <li class="tutorials" onclick="rotatePage('bitsolution')"><a href="#">BITSolution</a></li>
               <li class="about" onclick="rotatePage('product')"><a href="#">Product</a></li>
-              <li class="news"><a class="active">Portfolio</a></li>
-              <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
+              <li class="news" onclick="rotatePage('portfolio')"><a href="#">Portfolio</a></li>
+              <li class="contact"><a class="active">Client</a></li>
               <li class="contact" onclick="rotatePage('contactus')"><a href="#">Contact Us</a></li>
             </ul>
           </div>
@@ -92,15 +92,15 @@
           <div class="col-md-10">
             <div class="wow fadeIn"  data-wow-duration="3s" style="text-align:center;">
               <h1>
-                <br>Our <strong>Works</strong>
+                <br>Our <strong>Client</strong>
               </h1>
               
               <h4>
                 Feel free to see some <strong>Project</strong> that we have made
-                <br><br><br>
+                <br><br><br><br><br>
               </h4>
 
-              @include('frontend.viewPortofolio')
+              @include('frontend.viewClient')
             </div>
             <br><br>
           </div>

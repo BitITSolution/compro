@@ -30,12 +30,15 @@
 
 	Route::get('home', 'HomeController@index');
 
-	Route::get('/', 'controller_index@index');
-	Route::get('index', 'controller_index@index');
-	
-	Route::get('contactus', 'controller_contactus@index');
-	Route::get('portfolio', 'controller_portfolio@index');
-
+	#region Frontend.compro
+		Route::get('/', 'controller_bit@index');
+		Route::get('index', 'controller_bit@index');
+		Route::get('bitsolution', 'controller_bit@bitsolution');
+		Route::get('contactus', 'controller_bit@contactus');
+		Route::get('client', 'controller_bit@client');
+		Route::get('product', 'controller_bit@product');
+		Route::get('portfolio', 'controller_bit@portfolio');
+	#endregion
 
 	Route::controllers([
 		'auth' => 'Auth\AuthController',

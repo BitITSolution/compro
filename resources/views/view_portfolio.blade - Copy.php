@@ -76,37 +76,37 @@
         </div>
         
         <div id="about" class="container">
-          <div class="nav">
-            <ul>
-              <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
-              <li class="tutorials" onclick="rotatePage('bitsolution')"><a href="#">BITSolution</a></li>
-              <li class="about" onclick="rotatePage('product')"><a href="#">Product</a></li>
-              <li class="news"><a class="active">Portfolio</a></li>
-              <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
-              <li class="contact" onclick="rotatePage('contactus')"><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-
-          <div class="col-md-1"></div>
-
-          <div class="col-md-10">
-            <div class="wow fadeIn"  data-wow-duration="3s" style="text-align:center;">
-              <h1>
-                <br>Our <strong>Works</strong>
-              </h1>
-              
-              <h4>
-                Feel free to see some <strong>Project</strong> that we have made
-                <br><br><br>
-              </h4>
-
-              @include('frontend.viewPortofolio')
+          <center>
+            <div class="nav">
+              <ul>
+                <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
+                <li class="tutorials" onclick="rotatePage('bitsolution')"><a href="#">BITSolution</a></li>
+                <li class="about" onclick="rotatePage('product')"><a href="#">Product</a></li>
+                <li class="news"><a class="active">Portfolio</a></li>
+                <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
+                <li class="contact" onclick="rotatePage('contactus')"><a href="#">Contact Us</a></li>
+              </ul>
             </div>
-            <br><br>
-          </div>
-          
-        </div>
+        <center>
+         <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="wow fadeIn"  data-wow-duration="3s">
+            <h1>
+              <br>Our <strong>Works</strong>
+            </h1>
+              
+                 <h4>
+                    Feel free to see some <strong>Project</strong> that we have made
+                    <br><br><br>
 
+                    @include('frontend.viewPortofolio')
+                 </h4>
+                </div>
+          <br><br>
+                
+          </div>
+
+      </center>
           @include('frontend.footer')
   </body>
 </html>

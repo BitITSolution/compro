@@ -78,14 +78,14 @@
         <div id="about" class="container">
         <br><br>
         <!-- Home -->
-         <div class="col-md-12" style="height:auto;">
+         <div class="col-md-12">
 	        <div class="col-md-6" style="z-index:10;">
 	         
-	          <h1 class="wow swing" data-wow-duration="4s">
+	          <h1 class="wow swing myphoto " data-wow-duration="4s">
 	          	<br><strong>BIT</strong>Solution 
 	          </h1>
 	             <br>
-	          <h2 class="wow bounceIn" data-wow-duration="4s">
+	          <h2 class="wow bounceIn"  data-wow-duration="4s">
 	          	<blockquote class="pull-right">
 				 <p style="color:black;">The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
 				 <small>by <cite>Albert Einstein</cite></small>
@@ -98,15 +98,15 @@
 	         <br><br><br><br>
 	          <center>
 	        	<div class="wrap">
-					<div class="cube">						
+					<div class="cube" >
+						<div class="front hex" onclick="rotatePage('index')" ><br>HOME
+							<div class="corner-1"></div>
+							<div class="corner-2"></div>
+						</div>
 						<div class="topleft hex">
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
-                        <div class="front hex" onclick="rotatePage('index')" ><br>HOME
-                            <div class="corner-1"></div>
-                            <div class="corner-2"></div>
-                        </div>
 						<div class="top hex" onclick="rotatePage('portfolio')"><br>PORTFOLIO
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
@@ -132,12 +132,9 @@
 			  </center>
 	        </div>
          </div><!-- Home SECTION END -->
-	    </div><!-- Home SECTION END -->
-	
-        @include('frontend.footer')
-  </body>
-</html>        
-       
+	     </div><!-- Home SECTION END -->
+	        
+	   
         
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -155,13 +152,9 @@
 
     <script type="text/javascript">
         var timer = 0;
-        setTimeout(function() {
-            $(".cube").addClass("pointerevent");
-        }, 1);
-
-        setTimeout(function() {
-           $(".cube").removeClass("pointerevent");
-        }, 4000); // every 5 sec
+        setInterval(function() {
+            timer++;
+        }, 10); // every 5 sec
 
         function rotatePage(x){
             $("html").addClass("rotate360cw");
@@ -181,3 +174,5 @@
             }, 1000);
           });
     </script>
+  </body>
+</html>

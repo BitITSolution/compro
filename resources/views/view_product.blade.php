@@ -71,75 +71,59 @@
         <!-- Preloader -->
         <div id="preloader">           
             <div id="status">
-                <div class="wow tada infinite" data-wow-duration="8s">BIT</div>
+                <div class="wow tada infinite" data-wow-duration="5s">BIT</div>
             </div>
         </div>
         
         <div id="about" class="container">
-        <br><br>
-        <!-- Home -->
-         <div class="col-md-12" style="height:auto;">
-	        <div class="col-md-6" style="z-index:10;">
-	         
-	          <h1 class="wow swing" data-wow-duration="4s">
-	          	<br><strong>BIT</strong>Solution 
-	          </h1>
-	             <br>
-	          <h2 class="wow bounceIn" data-wow-duration="4s">
-	          	<blockquote class="pull-right">
-				 <p style="color:black;">The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
-				 <small>by <cite>Albert Einstein</cite></small>
-				</blockquote>
-	           </h2>
-	          
-	        </div>
+          <center>
+            <div class="nav">
+              <ul>
+                <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
+                <li class="tutorials" onclick="rotatePage('bitsolution')"><a href="#">BITSolution</a></li>
+                <li class="about"><a class="active">Product</a></li>
+                <li class="news" onclick="rotatePage('portfolio')"><a href="#">Portfolio</a></li>
+                <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
+                <li class="contact" onclick="rotatePage('contactus')"><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+        <center style="min-height:500px">
+         <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="wow swing"  data-wow-duration="3s">
+            <h1>
+              <br>Our <strong>Product</strong>
+            </h1>
+              
+                 <h4>
+                    We develop a <strong>solution</strong> for your software and website problem.
+                    <br><br><br>
+                    <div>
+                     <div class="glyphicon glyphicon-cog"    style="font-size:40px;margin:0;color:#ae6665;cursor:pointer;padding:10px;" onmouseover="changeContent('software')" onmouseout="resetContent()"></div>
+                     <div class="glyphicon glyphicon-globe"  style="font-size:40px;margin:0;color:#dfba54;cursor:pointer;padding:10px;" onmouseover="changeContent('website')" onmouseout="resetContent()"></div>
+                     <div class="glyphicon glyphicon-signal" style="font-size:35px;margin:0;color:#bfdf54;cursor:pointer;padding:10px;" onmouseover="changeContent('internet')" onmouseout="resetContent()"></div>
+                     <div class="glyphicon glyphicon-hdd"    style="font-size:35px;margin:0;color:#2AB0C5;cursor:pointer;padding:10px;" onmouseover="changeContent('hardware')" onmouseout="resetContent()"></div>
+                    </div>
+                     <!-- <img src = "./img/ig.png" width="40px" class="iconhover"> -->
+                 </h4>
+                </div>
+          <br>
+                <div class="wow fadeIn" data-wow-duration="3s" id="contentPortfolio">
+                   <h4>
+                      Not only software and website
+                      <br> we also work in computer networks and 
+                      <br>hardware procurement. 
+                   </h4>
+                </div>
+          </div>
 
-	        <div class="col-md-4 col-md-offset-1 wow rotateIn" id="wrapcube" data-wow-duration="3s" style="text-align:center;">
-	         <br><br><br><br>
-	          <center>
-	        	<div class="wrap">
-					<div class="cube">						
-						<div class="topleft hex">
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-                        <div class="front hex" onclick="rotatePage('index')" ><br>HOME
-                            <div class="corner-1"></div>
-                            <div class="corner-2"></div>
-                        </div>
-						<div class="top hex" onclick="rotatePage('portfolio')"><br>PORTFOLIO
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-						<div class="bottom hex" onclick="rotatePage('bitsolution')"><br>BITSolution
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-						<div class="left hex" onclick="rotatePage('contactus')"><br>CONTACT US
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-						<div class="back hex" onclick="rotatePage('product')"><br>PRODUCT
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-						<div class="right hex" onclick="rotatePage('client')"><br>CLIENT
-							<div class="corner-1"></div>
-							<div class="corner-2"></div>
-						</div>
-					</div>
-				</div>
-			  </center>
-	        </div>
-         </div><!-- Home SECTION END -->
-	    </div><!-- Home SECTION END -->
-	
-        @include('frontend.footer')
-  </body>
-</html>        
-       
-        
+      </center>
+        @include('frontend.footer')     
     
+  </body>
+</html>
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-latest.min.js"></script>
     
@@ -155,13 +139,9 @@
 
     <script type="text/javascript">
         var timer = 0;
-        setTimeout(function() {
-            $(".cube").addClass("pointerevent");
-        }, 1);
-
-        setTimeout(function() {
-           $(".cube").removeClass("pointerevent");
-        }, 4000); // every 5 sec
+        setInterval(function() {
+            timer++;
+        }, 10); // every 5 sec
 
         function rotatePage(x){
             $("html").addClass("rotate360cw");
@@ -169,15 +149,28 @@
                 window.location = x + "";
             }, 300); // every 5 sec
         }
-            
 
-       $( ".cube" )
-          .mouseenter(function() {
-          })
-          .mouseleave(function() {
-            $(".cube").addClass("pointerevent");
+        function changeContent(x){
+            $("#contentPortfolio").addClass("zoomOutanimation");
             setTimeout(function() {
-                $(".cube").removeClass("pointerevent");
-            }, 1000);
-          });
+                $("#contentPortfolio").removeClass("zoomOutanimation");
+                $.post("data/viewProduct.php", { work:x },
+          function(result) { 
+             $("#contentPortfolio").html(result);
+            }
+          );
+            }, 200); // every 5 sec
+        }
+            
+        function resetContent(){
+            $("#contentPortfolio").addClass("zoomOutanimation");
+            setTimeout(function() {
+                $("#contentPortfolio").removeClass("zoomOutanimation");
+                $.post("data/viewProduct.php", { work:"default" },
+          function(result) { 
+             $("#contentPortfolio").html(result);
+            }
+          );
+            }, 200); // every 5 sec
+        }
     </script>
