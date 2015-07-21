@@ -383,52 +383,102 @@ CUBE
 .wrap {
     perspective: 800px;
     perspective-origin: 50% 100px;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 .cube {
     position: relative;
     width: 150px;
     transform-style: preserve-3d;
     cursor: pointer;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 .cube div {
     position: absolute;
     width: 150px;
     height: 150px;
     border: 1px solid black;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 
 .back {
     transform: translateZ(-100px) rotateY(180deg);
     transition: 0s background;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 .right {
     transform: rotateY(-270deg) translateX(100px);
     transform-origin: top right;
     transition: 0s background;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 .topleft {
     transform: rotateY(-270deg) translateX(100px);
     transform-origin: top right;
     transition: 0s background;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 .left {
     transform: rotateY(270deg) translateX(-100px);
     transform-origin: center left;
     transition: 0s background;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 .top {
     transform: rotateX(-90deg) translateY(-50px);
     transform-origin: top center;
     transition: 0s background;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 .bottom {
     transform: rotateX(90deg) translateY(50px);
     transform-origin: bottom center;
     transition: 0s background;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 .front {
     transform: translateZ(50px);
     transition: 0s background;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 @keyframes spin {
     from { transform: rotateY(0); }
@@ -436,9 +486,6 @@ CUBE
 }
 .cube {
     animation: spin 10s infinite linear;
-}
-.cube:hover {
-    animation: pause !important;
 }
 
 
@@ -547,6 +594,11 @@ CUBE
 
 .wrap:hover .cube{
     animation: pause !important;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 
 
@@ -601,6 +653,11 @@ HEXAGON
     zoom:1;
     border-top:none;
     border-bottom:none;
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
    
 .cube:hover .hex .corner-1,
@@ -619,7 +676,12 @@ HEXAGON
     -o-backface-visibility: hidden;         
     backface-visibility: hidden;  
     border-left:1px solid black;
-    border-right:1px solid black;          
+    border-right:1px solid black;  
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;      
 }
 
 .cube:hover .hex .corner-1 {
@@ -629,6 +691,11 @@ HEXAGON
     -ms-transform: rotate(60deg);
     -o-transform: rotate(60deg);
     transform: rotate(60deg);
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 
 .cube:hover .hex .corner-2 {
@@ -637,6 +704,11 @@ HEXAGON
     -ms-transform: rotate(-60deg);
     -o-transform: rotate(-60deg);
     transform: rotate(-60deg);
+    -webkit-transition: background 0s linear;
+    -moz-transition: background 0s linear;
+    -o-transition: background 0s linear;
+    transition: background 0s linear;
+    list-style: none;
 }
 
 .cube:hover .hex .corner-1:before,
@@ -679,6 +751,9 @@ HEXAGON
     -ms-transition:all 0.1s linear;
 }
 
+.pointerevent{
+    pointer-events: none;
+}
 
 /*================================
 CONTACT

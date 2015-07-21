@@ -143,7 +143,7 @@
 
         function rotatePage(x){
             $("html").addClass("rotate360cw");
-            setInterval(function() {
+            setTimeout(function() {
                 window.location = x + "";
             }, 300); // every 5 sec
         }

@@ -28,10 +28,11 @@
 		Route::post('/message/projectPlanner', 'controller_message@submitProjectPlanner');
 	#endregion
 
+	Route::get('home', 'HomeController@index');
+
 	Route::get('/', 'controller_index@index');
 	Route::get('index', 'controller_index@index');
-
-	Route::get('home', 'HomeController@index');
+	
 	Route::get('contactus', 'controller_contactus@index');
 	Route::get('portfolio', 'controller_portfolio@index');
 

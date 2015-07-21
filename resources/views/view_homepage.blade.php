@@ -98,8 +98,8 @@
 	         <br><br><br><br>
 	          <center>
 	        	<div class="wrap">
-					<div class="cube">
-						<div class="front hex" onclick="rotatePage('index')"><br>HOME
+					<div class="cube" >
+						<div class="front hex" onclick="rotatePage('index')" ><br>HOME
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
@@ -158,11 +158,21 @@
 
         function rotatePage(x){
             $("html").addClass("rotate360cw");
-            setInterval(function() {
+            setTimeout(function() {
                 window.location = x + "";
             }, 300); // every 5 sec
         }
             
+
+       $( ".cube" )
+          .mouseenter(function() {
+          })
+          .mouseleave(function() {
+            $(".cube").addClass("pointerevent");
+            setTimeout(function() {
+                $(".cube").removeClass("pointerevent");
+            }, 1000);
+          });
     </script>
   </body>
 </html>
