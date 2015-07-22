@@ -6,33 +6,62 @@ use App\Models\model_cmpinfo;
 
 use Illuminate\Http\Request;
 
-class controller_index extends Controller {
+class controller_bit extends Controller {
+
+	/*
+	|--------------------------------------------------------------------------
+	| Home Controller
+	|--------------------------------------------------------------------------
+	|
+	| This controller renders your application's "dashboard" for users that
+	| are authenticated. Of course, you are free to change or remove the
+	| controller as you wish. It is just here to get your app started!
+	|
+	*/
 
 	/**
-	 * Display a listing of the resource.
+	 * Create a new controller instance.
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		//$this->middleware('auth');
+	}
+
+	/**
+	 * Show the application dashboard to the user.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		//
-    $param["data"] = model_cmpinfo::all();
-    return view('view_homepage',$param);
+		return view('view_homepage');
+	}
+
+	public function bitsolution()
+	{
+		return view('view_bitsolution');
 	}
 
 	public function contactus()
 	{
-		//
-    $param["data"] = model_cmpinfo::all();
-    return view('view_contactus',$param);
+		return view('view_contactus');
+	}
+
+	public function client()
+	{
+		return view('view_client');
+	}
+
+	public function product()
+	{
+		return view('view_product');
 	}
 
 	public function portfolio()
 	{
-		//
-    $param["data"] = model_cmpinfo::all();
-    return view('view_portfolio',$param);
+		return view('view_portfolio');
 	}
-
 
 }

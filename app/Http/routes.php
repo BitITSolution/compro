@@ -27,7 +27,6 @@
     });  
 	#endregion
 
-
 	Route::get('/',       'controller_frontend@home');
 	Route::get('index',   'controller_frontend@home');
 	Route::get('home',    'controller_frontend@home');
@@ -41,7 +40,6 @@
   Route::get('planner', 'controller_frontend@planner');
   Route::post('planner','controller_frontend@submitPlanner');
   #endregion
-
   
 	Route::controllers([
 		'auth' => 'Auth\AuthController',

@@ -81,68 +81,49 @@
               <ul>
                 <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
                 <li class="tutorials" onclick="rotatePage('bitsolution')"><a href="#">BITSolution</a></li>
-                <li class="about" onclick="rotatePage('product')"><a href="#">Product</a></li>
+                <li class="about"><a class="active">Product</a></li>
                 <li class="news" onclick="rotatePage('portfolio')"><a href="#">Portfolio</a></li>
                 <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
-                <li class="contact"><a class="active" href="#">Contact Us</a></li>
+                <li class="contact" onclick="rotatePage('contactus')"><a href="#">Contact Us</a></li>
               </ul>
             </div>
-            <br><br>
-
-
-            <div class="col-md-6">
-            <div class="wow fadeInLeft"  data-wow-duration="3s">
+        <center style="min-height:500px">
+         <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="wow swing"  data-wow-duration="3s">
             <h1>
-              <br><strong>BIT</strong>Solution 
+              <br>Our <strong>Product</strong>
             </h1>
-               <br>
-                    
+              
                  <h4>
-                    enquiries@bitsolution.com
-                    <br><br>
-                    Ngagel Jaya Tengah 73-77
-                    <br>
-                    Surabaya, Indonesia
-                    <br><br>
-                    <b>+621234567890<b>
+                    We develop a <strong>solution</strong> for your software and website problem.
                     <br><br><br>
-                     <img src = "./img/fb.png" width="40px" class="iconhover">
-                     <img src = "./img/twitter.png" width="40px" class="iconhover">
-                     <img src = "./img/google.png" width="40px" class="iconhover">
-                     <img src = "./img/ig.png" width="40px" class="iconhover">
+                    <div>
+                     <div class="glyphicon glyphicon-cog"    style="font-size:40px;margin:0;color:#ae6665;cursor:pointer;padding:10px;" onmouseover="changeContent('software')" onmouseout="resetContent()"></div>
+                     <div class="glyphicon glyphicon-globe"  style="font-size:40px;margin:0;color:#dfba54;cursor:pointer;padding:10px;" onmouseover="changeContent('website')" onmouseout="resetContent()"></div>
+                     <div class="glyphicon glyphicon-signal" style="font-size:35px;margin:0;color:#bfdf54;cursor:pointer;padding:10px;" onmouseover="changeContent('internet')" onmouseout="resetContent()"></div>
+                     <div class="glyphicon glyphicon-hdd"    style="font-size:35px;margin:0;color:#2AB0C5;cursor:pointer;padding:10px;" onmouseover="changeContent('hardware')" onmouseout="resetContent()"></div>
+                    </div>
+                     <!-- <img src = "./img/ig.png" width="40px" class="iconhover"> -->
                  </h4>
                 </div>
-            
-            
+          <br>
+                <div class="wow fadeIn" data-wow-duration="3s" id="contentPortfolio">
+                   <h4>
+                      Not only software and website
+                      <br> we also work in computer networks and 
+                      <br>hardware procurement. 
+                   </h4>
+                </div>
           </div>
 
-
-            <div class="col-md-6">
-            <br>
-              <h3 class="wow fadeInLeft" data-wow-duration="3s">
-                Let Us Know What's in Your Mind
-                  <br><br>
-              </h3>
-              <div class="wow fadeInLeft" data-wow-duration="3s">
-                  <form class="form-horizontal tasi-form" action="control/insertbrand.php" method="post" enctype="multipart/form-data">
-                    <input type="text" placeholder="Name" class="inputcontact">
-                    <input type="text" placeholder="Phone" class="inputcontact">
-                      <br>
-                    <input type="text" placeholder="Email" class="inputcontact" style="width:84%;">
-                      <br>
-                    <textarea placeholder="Fill Me" class="inputcontact" style="width:84%;height:150px;resize:none;"></textarea>
-                    <input type="submit" value="Send" class="buttoncontact" style="width:84%;">
-                  </form>
-              </div>
-            </div><!-- Home SECTION END -->
-          </center>
-        </div>
-        
-        @include('frontend.footer')
+      </center>
+        @include('frontend.footer')     
+    
   </body>
-</html>     
-    
-    
+</html>
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-latest.min.js"></script>
     
@@ -168,5 +149,28 @@
                 window.location = x + "";
             }, 300); // every 5 sec
         }
+
+        function changeContent(x){
+            $("#contentPortfolio").addClass("zoomOutanimation");
+            setTimeout(function() {
+                $("#contentPortfolio").removeClass("zoomOutanimation");
+                $.post("data/viewProduct.php", { work:x },
+          function(result) { 
+             $("#contentPortfolio").html(result);
+            }
+          );
+            }, 200); // every 5 sec
+        }
             
+        function resetContent(){
+            $("#contentPortfolio").addClass("zoomOutanimation");
+            setTimeout(function() {
+                $("#contentPortfolio").removeClass("zoomOutanimation");
+                $.post("data/viewProduct.php", { work:"default" },
+          function(result) { 
+             $("#contentPortfolio").html(result);
+            }
+          );
+            }, 200); // every 5 sec
+        }
     </script>
