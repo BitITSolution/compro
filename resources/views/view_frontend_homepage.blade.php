@@ -73,14 +73,14 @@
 	          <center>
 	        	<div class="wrap">
 					<div class="cube">						
-            <div class="front hex" onclick="rotatePage('index')" ><br>HOME
-                <div class="corner-1"></div>
-                <div class="corner-2"></div>
-            </div>
 						<div class="topleft hex">
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
+            <div class="front hex" onclick="rotatePage('index')" ><br>HOME
+                <div class="corner-1"></div>
+                <div class="corner-2"></div>
+            </div>
 						<div class="top hex" onclick="rotatePage('career')"><br>CAREER
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
@@ -89,7 +89,7 @@
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
-						<div class="left hex" onclick="rotatePage('contactus')"><br>CONTACT US
+						<div class="left hex" onclick="rotatePage('contact')"><br>CONTACT
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
