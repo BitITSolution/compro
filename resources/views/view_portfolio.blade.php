@@ -40,6 +40,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
         
     <!-- ===========================
     ICONS: 
@@ -49,7 +52,7 @@
     <!-- ===========================
     GOOGLE FONTS
     =========================== -->    
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Antic|Raleway:300">
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Antic|Raleway:300"> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -97,7 +100,7 @@
               
               <h4>
                 Feel free to see some <strong>Project</strong> that we have made
-                <br><br><br>
+                <br><br><br><br><br>
               </h4>
 
               @include('frontend.viewPortofolio')
@@ -123,6 +126,11 @@
   <script src="js/jquery.jribbble-1.0.1.ugly.js"></script>
   <script src="js/drifolio.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.fullscreen-popup.js"></script>
+  <script src="js/jquery.fullscreen-popup.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script>new WOW().init();</script>    
 
   <script type="text/javascript">
@@ -161,4 +169,37 @@
         );
           }, 200); // every 5 sec
       }
+
+      // FULL SCREEN POP UP
+      $(function() {
+        $(".open-popup").fullScreenPopup({
+          // Options
+        });
+      });
+
+      // AJAX POP UP
+      function detailpopup(x){
+        $("#titledetail").html("Popup #"+x);
+      }
+
+      // SLIDER
+      $(document).ready(function() {
+       
+        $(".owl-demo").owlCarousel({
+       
+            navigation : true, // Show next and prev buttons
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true
+       
+            // "singleItem:true" is a shortcut for:
+            // items : 1, 
+            // itemsDesktop : false,
+            // itemsDesktopSmall : false,
+            // itemsTablet: false,
+            // itemsMobile : false
+       
+        });
+       
+      });
   </script>

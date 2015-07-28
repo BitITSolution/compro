@@ -5,6 +5,28 @@
     list-style: none;*/
 }
 
+
+
+/*================================
+FONT
+================================*/
+/* latin */
+@font-face {
+  font-family: 'Antic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Antic'), local('Antic-Regular'), url(../fonts/NHsS2_8AsBoNMVvtCA3aYA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(../fonts/-_Ctzj9b56b8RgXW8FArifk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 /*================================
 TYPOGRAPHY
 ================================*/
@@ -291,9 +313,19 @@ DIAMOND BUTTON
 /*================================
 CUBE
 ================================*/
+
+#wrapcube{
+    max-height:200px;
+}
 .wrap {
     perspective: 800px;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
     perspective-origin: 50% 100px;
+    -webkit-perspective-origin: 50% 100px;
+    -moz-perspective-origin: 50% 100px;
+    -o-perspective-origin: 50% 100px;
     -webkit-transition: background 0s linear;
     -moz-transition: background 0s linear;
     -o-transition: background 0s linear;
@@ -402,103 +434,30 @@ CUBE
 
 .cube:hover .front {
     transform: rotateX(0deg) translateX(0px) translateY(-195px);
-    transform-origin: top center;
-    width:150px;
-    height:86px;
-    -webkit-background-size: auto 173px;                            
-    -moz-background-size: auto 173px;                           
-    -ms-background-size: auto 173px;                            
-    -o-background-size: auto 173px;                         
-    position: relative;
-    float:left;
-    margin:1px 5px;
-    text-align:center;
     zoom:1;
 }
 .cube:hover .topleft {
     transform: rotateX(0deg) translateX(0px) translateY(75px);
-    transform-origin: top center;
-    width:150px;
-    height:86px;         
-    -webkit-background-size: auto 173px;                            
-    -moz-background-size: auto 173px;                           
-    -ms-background-size: auto 173px;                            
-    -o-background-size: auto 173px;                         
-    position: relative;
-    float:left;
-    margin:1px 5px;
-    text-align:center;
     zoom:1;
 }
 .cube:hover .top {
     transform: rotateX(0deg) translateX(0px) translateY(-60px);
-    transform-origin: top center;
-    width:150px;
-    height:86px;         
-    -webkit-background-size: auto 173px;                            
-    -moz-background-size: auto 173px;                           
-    -ms-background-size: auto 173px;                            
-    -o-background-size: auto 173px;                         
-    position: relative;
-    float:left;
-    margin:1px 5px;
-    text-align:center;
     zoom:1;
 }
 .cube:hover .bottom {
     transform: rotateX(0deg) translateX(105px) translateY(-400px);
-    transform-origin: top center;
-    width:150px;
-    height:86px;         
-    -webkit-background-size: auto 173px;                            
-    -moz-background-size: auto 173px;                           
-    -ms-background-size: auto 173px;                            
-    -o-background-size: auto 173px;                         
-    position: relative;
-    float:left;
-    margin:1px 5px;
-    text-align:center;
     zoom:1;
 }
 .cube:hover .left {
     transform: rotateX(0deg) translateX(105px) translateY(-400px);
-    transform-origin: top center;
-    width:150px;
-    height:86px;         
-    -webkit-background-size: auto 173px;                            
-    -moz-background-size: auto 173px;                           
-    -ms-background-size: auto 173px;                            
-    -o-background-size: auto 173px;                         
-    position: relative;
-    float:left;
-    margin:1px 5px;
-    text-align:center;
     zoom:1;
 }
 .cube:hover .right {
-    transform: rotateX(0deg) translateX(-105px) translateY(-670px);
-    transform-origin: top center;
-    width:150px;
-    height:86px;         
-    -webkit-background-size: auto 173px;                            
-    -moz-background-size: auto 173px;                           
-    -ms-background-size: auto 173px;                            
-    -o-background-size: auto 173px;                         
-    position: relative;
-    float:left;
-    margin:1px 5px;
-    text-align:center;
+    transform: rotateX(0deg) translateX(-105px) translateY(-670px); 
     zoom:1;
 }
 .cube:hover .back {
     transform: rotateX(0deg) translateX(-105px) translateY(-670px);
-    transform-origin: top center;
-    width:150px;
-    height:86px;                       
-    position: relative;
-    float:left;
-    margin:1px 5px;
-    text-align:center;
     zoom:1;
 }
 
@@ -510,6 +469,8 @@ CUBE
     transition: background 0s linear;
     list-style: none;
 }
+
+
 
 
 .back:hover { background: #fea3aa; z-index:20; }
@@ -631,114 +592,6 @@ HEXAGON HOME
 }
 
 
-/*================================
-HEXAGON PORTFOLIO
-================================*/
-#categories li{
-  position:relative;
-  list-style-type:none;
-  width:25.85714285714286%; /* = (100-2.5) / 3.5 */
-  padding-bottom: 30.16760145166612%; /* =  width /0.866 */
-  float:left;
-  overflow:hidden;
-  visibility:hidden;
- 
-  -webkit-transform: rotate(-60deg) skewY(30deg);
-  -ms-transform: rotate(-60deg) skewY(30deg);
-  transform: rotate(-60deg) skewY(30deg);
-
-  cursor: pointer;
-}
-#categories li:nth-child(3n+2){
-  margin:0 1%;
-}
-#categories li:nth-child(6n+4){
-  margin-left:0.5%;
-}
-#categories li:nth-child(6n+4), #categories li:nth-child(6n+5), #categories li:nth-child(6n+6) {
-  margin-top: -6.9285714285%;
-  margin-bottom: -6.9285714285%;
-  
-  -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-  -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-  transform: translateX(50%) rotate(-60deg) skewY(30deg);
-}
-#categories li:nth-child(6n+4):last-child, #categories li:nth-child(6n+5):last-child, #categories li:nth-child(6n+6):last-child{
-  margin-bottom:0%;
-}
-#categories li *{
-  position:absolute;
-  visibility:visible;
-}
-#categories li > div{
-  width:100%;
-  height:100%;
-  text-align:center;
-  color:#fff;
-  overflow:hidden;
-  
-  -webkit-transform: skewY(-30deg) rotate(60deg);
-  -ms-transform: skewY(-30deg) rotate(60deg);
-  transform: skewY(-30deg) rotate(60deg);
-  
-    -webkit-backface-visibility:hidden;
-  
-}
-
-/* HEX CONTENT */
-#categories li img{
-  left:-100%; right:-100%;
-  width: auto; height:100%;
-  margin:0 auto;   
-}
-
-#categories div h1, #categories div p{
-  width:100%;
-  padding:0 5%;
-  background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
-  font-family: 'Raleway', sans-serif;
-  
-  -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
-  -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
-  transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
-}
-#categories li h1{
-  bottom:150%;
-  font-style:italic;
-  font-weight:normal;
-  font-size:1.2em;
-  padding-top:100%;
-  padding-bottom:100%;
-}
-#categories li h1:after{
-  content:'';
-  display:block;
-  position:absolute;
-  bottom:-1px; left:45%;
-  width:10%;
-  text-align:center;
-  z-index:1;
-  border-bottom:2px solid #fff;
-}
-#categories li p{
-    padding-top:50%;
-    top:150%;
-    padding-bottom:50%;
-    font-size:0.9em;
-}
-
-
-/* HOVER EFFECT  */
-
-#categories li div:hover h1 {
-  bottom:48%;
-  padding-bottom:10%;
-}
-
-#categories li div:hover p{
-  top:48%;
-  padding-top:10%;
-}
 
 /*================================
 HEXAGON CLIENT
@@ -749,44 +602,132 @@ HEXAGON CLIENT
     transition-duration: .5s;
 }
 
+.titlehexagon{
+    position:relative;margin-top:-160px;text-align:center;opacity: 0;font-size:15px;text-transform: uppercase;font-weight: bold;
+}
+
 .texthexagon{
-    position:relative;margin-top:-150px;margin-left:3%;width:190px;color:black;cursor:pointer; text-align:center;opacity: 0;
+    position:relative;margin-left:3%;width:170px;color:black;cursor:pointer; text-align:center;opacity: 0;margin-bottom: 5px;
      -webkit-transition-duration: .5s; /* Safari */
     transition-duration: .5s;
+}
+.buttonhexagon{
+    border: 1px solid black;
+    /*opacity: 0;*/
+    padding: 5px;
+    z-index: 20;
+    text-align:center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.buttonhexagon:hover{
+    background: black;
+    color: white;
 }
 
 svg{
   position: relative;
   height:200px;
+  margin-left:-10px;
   cursor: pointer;
    -webkit-transition-duration: .5s; /* Safari */
     transition-duration: .5s;
 }
 
+.conhexagon:hover .titlehexagon{
+    opacity: 1;
+}
 .conhexagon:hover .texthexagon{
     opacity: 1;
 }
+.conhexagon:hover .buttonhexagon{
+    opacity: 1;
+}
 .conhexagon:hover svg{
-    opacity: 0.2;
+    opacity: 0.17;
 }
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-    svg{ height:205px; }
-    .conhexagon{ padding:5px;margin-bottom:-50px;margin-top:50px; }
-    .texthexagon{ width:300px; }
+    .conhexagon{ padding:5px;margin-top:10px; }
+    .texthexagon{ width:300px;margin-left:3%; }
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
-    svg{ height:205px; }
-    .conhexagon{ padding:5px;margin-bottom:-50px;margin-top:50px;width:300px; }
-    .texthexagon{ margin-left:17%; }
+    svg{ height:230px; }
+    .conhexagon{ padding:5px;margin-top:30px;}
+    .texthexagon{ width:300px;margin-left:3%; }
 }
 
 @media only screen and (min-width : 1224px) {
-    svg{ height:200px; }
+    
 }
 
+/*================================
+DETAIL PORTFOLIO OVERLAY FULLSCREEN
+================================*/
+
+.fsp-close{
+    font-size: 40px;
+}
+
+#slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 240px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+
+.owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#titledetail{
+    font-size: 52px;
+}
+#contentdetail{
+    overflow-y:scroll; padding: 0 20px 0 20px;max-height:300px;
+}
+
+/*================================
+DETAIL PORTFOLIO SCROLLBAR
+================================*/
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4); 
+}
 
 /*================================
 CONTACT

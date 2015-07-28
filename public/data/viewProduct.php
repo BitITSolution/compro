@@ -46,18 +46,19 @@
 		$result .= "<h4>
 					<strong style='color:#2AB0C5;'>Hardware </strong>Procurement
 					<br>
-					  <div class='col-md-4'></div>
-					  <div class='col-md-5' style='text-align:justify;margin-left:35%;margin-top:-40px;'>
-						<span class='glyphicon glyphicon-check' style='font-size:15px;margin:0;color:grey;'></span>&nbsp;&nbsp; Desktop Application
-						    <br>
-						<span class='glyphicon glyphicon-check' style='font-size:15px;margin:0;color:grey;'></span>&nbsp;&nbsp; Apps for Android
-						  <br>
-						<span class='glyphicon glyphicon-check' style='font-size:15px;margin:0;color:grey;'></span>&nbsp;&nbsp; Website
-						  <br>
-						<span class='glyphicon glyphicon-check' style='font-size:15px;margin:0;color:grey;'></span>&nbsp;&nbsp; Internet Connection
-						  <br>
+					  <div class='col-md-12' style='text-align:left;'>
+					  	<div class='col-md-2' style='text-align:left;'></div>
+					  	<div class='col-md-4' style='text-align:left;margin-left:20%;'>
+							<span class='glyphicon glyphicon-check' style='font-size:14px;margin:0;color:grey;'></span>&nbsp;&nbsp; Desktop Application
+							    <br>
+							<span class='glyphicon glyphicon-check' style='font-size:14px;margin:0;color:grey;'></span>&nbsp;&nbsp; Apps for Android
+							  <br>
+							<span class='glyphicon glyphicon-check' style='font-size:14px;margin:0;color:grey;'></span>&nbsp;&nbsp; Website
+							  <br>
+							<span class='glyphicon glyphicon-check' style='font-size:14px;margin:0;color:grey;'></span>&nbsp;&nbsp; Internet Connection
+					  	</div>
 					  </div>
-					  <div class='col-md-12' style='text-align:center;margin-top:10px;margin-bottom:-200px;'>
+					  <div class='col-md-12' style='text-align:center;margin-top:-40px;margin-bottom:-10px;'>
 						Ummm... Hardware ? 
 						<br><strong>Check !!</strong>
 					</div>

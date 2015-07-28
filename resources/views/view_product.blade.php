@@ -49,7 +49,7 @@
     <!-- ===========================
     GOOGLE FONTS
     =========================== -->    
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Antic|Raleway:300">
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Antic|Raleway:300"> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -87,6 +87,7 @@
                 <li class="contact" onclick="rotatePage('contactus')"><a href="#">Contact Us</a></li>
               </ul>
             </div>
+          </center>
         <center style="min-height:500px">
          <div class="col-md-1"></div>
           <div class="col-md-10">
@@ -116,8 +117,65 @@
                    </h4>
                 </div>
           </div>
+        </center>
+          <br><br><br>
+          <!-- <br><hr style="border-color: black;width:50%;"><br><br> -->
+          <center>
+            <div class="col-md-12">
+              <hr style="border-color:black;width:70%;">
+              <h3>PROJECT PLANNER</h3>
+              <h4>
+                Want to work with us? Submit your ideas. 
+                <br>Verified your email within <b>3 days</b> and we’ll get back to you as soon as possible.
+                <br><br><br>
+                <h4>Your Identity</h4>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                  </div>                  
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Phone</label>
+                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Phone">
+                  </div>
+                  <br><br>
+                   <h4>Your Ideas</h4>
+                  <textarea class="form-control" rows="3" cols="71" style="resize:none;" placeholder="Your Ideas"></textarea>
+                  <br><br>
+                   <h4>Details</h4>
+                   <div class="form-group">
+                      <select class="form-control">
+                        <option>Software</option>
+                        <option>Website</option>
+                        <option>Internet</option>
+                        <option>Hardware</option>
+                      </select>
+                  </div>
 
-      </center>
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Date</label>
+                    <input type="date" class="form-control" id="exampleInputEmail3" placeholder="Date">
+                  </div>    
+
+                  <div class="form-group">
+                      <select class="form-control">
+                        <option>Rp. 3 juta - 5 juta</option>
+                        <option>Rp. 5 juta - 20 juta</option>
+                        <option>Rp. 20 juta - 50 juta</option>
+                        <option>Rp. 50 juta keatas</option>
+                      </select>
+                  </div>
+                  <br><br><br>
+                  <button type="submit" class="btn btn-warning">Submit Ideas</button>
+                  <br><br>
+                </form>
+              </h4>
+            </div>
+          </center>
         @include('frontend.footer')     
     
   </body>

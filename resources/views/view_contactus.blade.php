@@ -49,7 +49,7 @@
     <!-- ===========================
     GOOGLE FONTS
     =========================== -->    
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Antic|Raleway:300">
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Antic|Raleway:300"> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -104,7 +104,7 @@
                     <br>
                     Surabaya, Indonesia
                     <br><br>
-                    <b>+621234567890<b>
+                    <b>+621234567890</b>
                     <br><br><br>
                      <img src = "./img/fb.png" width="40px" class="iconhover">
                      <img src = "./img/twitter.png" width="40px" class="iconhover">

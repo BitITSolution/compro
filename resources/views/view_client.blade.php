@@ -40,6 +40,26 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+
+    	<style type="text/css">
+		blockquote
+		{
+		    clear: both;
+		    font-style: italic;
+		    margin-left: 10px;
+		    margin-right: 10px;
+		    padding: 10px 10px 0 50px;
+		    position: relative;
+		    quotes: none;
+		    background: url(img/open-quote.png) 0 0 no-repeat;
+		    border: 0px;
+		    font-size: 100%;
+		    color: black;
+		    line-height: 200%;
+		}
+		</style>
+
         
     <!-- ===========================
     ICONS: 
@@ -49,7 +69,7 @@
     <!-- ===========================
     GOOGLE FONTS
     =========================== -->    
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Antic|Raleway:300">
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Antic|Raleway:300"> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -96,8 +116,10 @@
               </h1>
               
               <h4>
-                Feel free to see some <strong>Project</strong> that we have made
-                <br><br><br><br><br>
+                 Awesome people we work with
+                <br>
+					@include('frontend.viewTestimonial')
+                <br><br><br>
               </h4>
 
               @include('frontend.viewClient')
@@ -123,6 +145,8 @@
   <script src="js/jquery.jribbble-1.0.1.ugly.js"></script>
   <script src="js/drifolio.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
   <script>new WOW().init();</script>    
 
   <script type="text/javascript">
@@ -161,4 +185,14 @@
         );
           }, 200); // every 5 sec
       }
+
+     $(document).ready(function () {
+         $('.bxslider').bxSlider({
+             mode: 'vertical',
+             slideMargin: 3,
+             auto:true,
+             pause: 8000
+         });
+     });
+
   </script>
