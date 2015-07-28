@@ -11,35 +11,36 @@
 	|
 	*/
 
-	#region Backend
-		Route::get('/backend/login', 'Backend\controller_auth@index');
-		Route::post('/backend/login', 'Backend\controller_auth@login');
-		Route::get('/backend/home', 'Backend\controller_home@index');
+  #region Backend
+    Route::group(['prefix' => 'backend'], function () {
+      Route::get('compro', 'Backend\controller_compro@index');
+      Route::get('compro/getEditorData', 'Backend\controller_compro@getEditorData');
+      Route::post('compro/getEditorData', 'Backend\controller_compro@getEditorData');
+    });  
+  #endregion
+
+	#region Client
+    Route::group(['prefix' => 'client'], function () {
+      Route::get('compro', 'Backend\controller_compro@index');
+      Route::get('compro/getEditorData', 'Backend\controller_compro@getEditorData');
+      Route::post('compro/getEditorData', 'Backend\controller_compro@getEditorData');
+    });  
 	#endregion
 
-	#region Backend.compro
-		Route::get('/backend/compro', 'Backend\controller_compro@index');
-		Route::get('/backend/compro/getEditorData', 'Backend\controller_compro@getEditorData');
-		Route::post('/backend/compro/getEditorData', 'Backend\controller_compro@getEditorData');
-	#endregion
+	Route::get('/',       'controller_frontend@home');
+	Route::get('index',   'controller_frontend@home');
+	Route::get('home',    'controller_frontend@home');
+  Route::get('about',   'controller_frontend@about');
+  Route::get('client',  'controller_frontend@client');
+  Route::get('product', 'controller_frontend@product'); //Product + portfolio
+  Route::get('career',  'controller_frontend@career');
+	Route::get('contact', 'controller_frontend@contact');
 
-	#region Message (Project Planner & Message us)
-		Route::get('/message/projectPlanner', 'controller_message@projectPlanner');
-		Route::post('/message/projectPlanner', 'controller_message@submitProjectPlanner');
-	#endregion
-
-	Route::get('home', 'HomeController@index');
-
-	#region Frontend.compro
-		Route::get('/', 'controller_bit@index');
-		Route::get('index', 'controller_bit@index');
-		Route::get('bitsolution', 'controller_bit@bitsolution');
-		Route::get('contactus', 'controller_bit@contactus');
-		Route::get('client', 'controller_bit@client');
-		Route::get('product', 'controller_bit@product');
-		Route::get('portfolio', 'controller_bit@portfolio');
-	#endregion
-
+  #region Message (Project Planner & Message us)
+  Route::get('planner', 'controller_frontend@planner');
+  Route::post('planner','controller_frontend@submitPlanner');
+  #endregion
+  
 	Route::controllers([
 		'auth' => 'Auth\AuthController',
 		'password' => 'Auth\PasswordController',

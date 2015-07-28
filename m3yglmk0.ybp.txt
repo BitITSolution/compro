@@ -1,0 +1,46 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+Conflicts:
+	app/Http/routes.php
+	resources/views/view_frontend_homepage.blade.php
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 2 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	renamed:    app/Http/Controllers/controller_contactus.php -> app/Http/Controllers/controller_BIT.php
+#	modified:   app/Http/routes.php
+#	modified:   public/css/style.css
+#	new file:   public/data/viewPortofolio.php
+#	renamed:    public/data/viewPortfolio.php -> public/data/viewProduct.php
+#	new file:   public/img/s1.jpg
+#	new file:   public/img/s2.jpg
+#	new file:   public/img/s3.jpg
+#	new file:   public/img/s4.jpg
+#	new file:   public/img/s7.png
+#	new file:   public/img/s8.png
+#	new file:   resources/views/frontend/footer.php
+#	new file:   resources/views/frontend/viewClient.php
+#	new file:   resources/views/frontend/viewPortofolio - Copy.php
+#	new file:   resources/views/frontend/viewPortofolio.php
+#	new file:   resources/views/view_bitsolution.blade.php
+#	new file:   resources/views/view_client.blade.php
+#	modified:   resources/views/view_frontend_contact.blade.php
+#	modified:   resources/views/view_frontend_homepage.blade.php
+#	modified:   resources/views/view_frontend_product.blade.php
+#	new file:   resources/views/view_portfolio.blade - Copy.php
+#	new file:   resources/views/view_product.blade.php
+#
+

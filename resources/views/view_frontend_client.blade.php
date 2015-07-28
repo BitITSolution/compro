@@ -40,9 +40,26 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+
+    	<style type="text/css">
+		blockquote
+		{
+		    clear: both;
+		    font-style: italic;
+		    margin-left: 10px;
+		    margin-right: 10px;
+		    padding: 10px 10px 0 50px;
+		    position: relative;
+		    quotes: none;
+		    background: url(img/open-quote.png) 0 0 no-repeat;
+		    border: 0px;
+		    font-size: 100%;
+		    color: black;
+		    line-height: 200%;
+		}
+		</style>
+
         
     <!-- ===========================
     ICONS: 
@@ -84,8 +101,8 @@
               <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
               <li class="tutorials" onclick="rotatePage('bitsolution')"><a href="#">BITSolution</a></li>
               <li class="about" onclick="rotatePage('product')"><a href="#">Product</a></li>
-              <li class="news"><a class="active">Portfolio</a></li>
-              <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
+              <li class="news" onclick="rotatePage('portfolio')"><a href="#">Portfolio</a></li>
+              <li class="contact"><a class="active">Client</a></li>
               <li class="contact" onclick="rotatePage('contactus')"><a href="#">Contact Us</a></li>
             </ul>
           </div>
@@ -95,15 +112,17 @@
           <div class="col-md-10">
             <div class="wow fadeIn"  data-wow-duration="3s" style="text-align:center;">
               <h1>
-                <br>Our <strong>Works</strong>
+                <br>Our <strong>Client</strong>
               </h1>
               
               <h4>
-                Feel free to see some <strong>Project</strong> that we have made
-                <br><br><br><br><br>
+                 Awesome people we work with
+                <br>
+					@include('frontend.viewTestimonial')
+                <br><br><br>
               </h4>
 
-              @include('frontend.viewPortofolio')
+              @include('frontend.viewClient')
             </div>
             <br><br>
           </div>
@@ -127,10 +146,7 @@
   <script src="js/drifolio.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery-1.11.1.min.js"></script>
-  <script src="js/jquery.fullscreen-popup.js"></script>
-  <script src="js/jquery.fullscreen-popup.min.js"></script>
-  <script src="js/owl.carousel.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
   <script>new WOW().init();</script>    
 
   <script type="text/javascript">
@@ -170,36 +186,13 @@
           }, 200); // every 5 sec
       }
 
-      // FULL SCREEN POP UP
-      $(function() {
-        $(".open-popup").fullScreenPopup({
-          // Options
-        });
-      });
+     $(document).ready(function () {
+         $('.bxslider').bxSlider({
+             mode: 'vertical',
+             slideMargin: 3,
+             auto:true,
+             pause: 8000
+         });
+     });
 
-      // AJAX POP UP
-      function detailpopup(x){
-        $("#titledetail").html("Popup #"+x);
-      }
-
-      // SLIDER
-      $(document).ready(function() {
-       
-        $(".owl-demo").owlCarousel({
-       
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true
-       
-            // "singleItem:true" is a shortcut for:
-            // items : 1, 
-            // itemsDesktop : false,
-            // itemsDesktopSmall : false,
-            // itemsTablet: false,
-            // itemsMobile : false
-       
-        });
-       
-      });
   </script>

@@ -84,7 +84,7 @@
                 <li class="about"><a class="active">Product</a></li>
                 <li class="news" onclick="rotatePage('portfolio')"><a href="#">Portfolio</a></li>
                 <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
-                <li class="contact" onclick="rotatePage('contactus')"><a href="#">Contact Us</a></li>
+                <li class="contact" onclick="rotatePage('contact')"><a href="#">Contact Us</a></li>
               </ul>
             </div>
           </center>
