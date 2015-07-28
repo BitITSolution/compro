@@ -592,6 +592,36 @@ HEXAGON HOME
 }
 
 
+/*================================
+ABOUT BITSOLUTION
+================================*/
+.aboutright_header{
+    float:left;
+    width:45%;
+    padding:5px 20px 10px 20px;
+    margin:35px 30px 20px 30px;
+    text-align: justify;
+    border: 1px dotted black;
+}
+.aboutright_body{
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+/*================================
+CAREER
+================================*/
+.notactive{
+    opacity: 0.4;
+     border:1px solid transparent;
+}
+.notactive:hover{
+    opacity: 1;
+    /*border:1px solid black;*/
+}
+
+
 
 /*================================
 HEXAGON CLIENT
@@ -603,7 +633,7 @@ HEXAGON CLIENT
 }
 
 .titlehexagon{
-    position:relative;margin-top:-160px;text-align:center;opacity: 0;font-size:15px;text-transform: uppercase;font-weight: bold;
+    position:relative;margin-top:-160px;text-align:center;opacity: 0;font-size:15px;text-transform: uppercase;font-weight: bold;cursor: pointer;
 }
 
 .texthexagon{

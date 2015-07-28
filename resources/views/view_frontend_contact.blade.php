@@ -80,9 +80,9 @@
             <div class="nav">
               <ul>
                 <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
-                <li class="tutorials" onclick="rotatePage('bitsolution')"><a href="#">BITSolution</a></li>
-                <li class="about" onclick="rotatePage('product')"><a href="#">Product</a></li>
-                <li class="news" onclick="rotatePage('portfolio')"><a href="#">Portfolio</a></li>
+                <li class="tutorials" onclick="rotatePage('about')"><a href="#">BITSolution</a></li>
+                <li class="about" onclick="rotatePage('career')"><a href="#">Career</a></li>
+                <li class="news" onclick="rotatePage('product')"><a href="#">Product</a></li>
                 <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
                 <li class="contact"><a class="active" href="#">Contact Us</a></li>
               </ul>

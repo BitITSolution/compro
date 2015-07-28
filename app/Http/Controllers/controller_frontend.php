@@ -58,7 +58,7 @@ class controller_frontend extends Controller {
   }
 
   public function contact() {
-    return view('view_frontend',['page'=>'contact']);
+    return view('view_frontend_contact');//,['page'=>'contact']);
   }
 
   public function planner() {

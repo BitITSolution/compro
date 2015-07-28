@@ -30,10 +30,10 @@
 	Route::get('/',       'controller_frontend@home');
 	Route::get('index',   'controller_frontend@home');
 	Route::get('home',    'controller_frontend@home');
-  Route::get('about',   'controller_frontend@about');
-  Route::get('client',  'controller_frontend@client');
-  Route::get('product', 'controller_frontend@product'); //Product + portfolio
-  Route::get('career',  'controller_frontend@career');
+    Route::get('about',   'controller_frontend@about');
+    Route::get('client',  'controller_frontend@client');
+    Route::get('product', 'controller_frontend@product'); //Product + portfolio
+    Route::get('career',  'controller_frontend@career');
 	Route::get('contact', 'controller_frontend@contact');
 
   #region Message (Project Planner & Message us)

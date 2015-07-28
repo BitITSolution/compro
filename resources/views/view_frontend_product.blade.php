@@ -82,25 +82,46 @@
           <div class="nav">
             <ul>
               <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
-              <li class="tutorials" onclick="rotatePage('bitsolution')"><a href="#">BITSolution</a></li>
-              <li class="about" onclick="rotatePage('product')"><a href="#">Product</a></li>
-              <li class="news"><a class="active">Portfolio</a></li>
+              <li class="tutorials" onclick="rotatePage('about')"><a href="#">BITSolution</a></li>
+              <li class="about" onclick="rotatePage('career')"><a href="#">Career</a></li>
+              <li class="news"><a class="active">Product</a></li>
               <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
               <li class="contact" onclick="rotatePage('contact')"><a href="#">Contact</a></li>
             </ul>
           </div>
 
-          <div class="col-md-1"></div>
-
-          <div class="col-md-10">
-            <div class="wow fadeIn"  data-wow-duration="3s" style="text-align:center;">
+          <div class="col-md-12">
+            <center style="height:450px">
               <h1>
                 <br>Our <strong>Works</strong>
               </h1>
-              
               <h4>
-                Feel free to see some <strong>Project</strong> that we have made
-                <br><br><br><br><br>
+                We develop a <strong>solution</strong> for your software and website problem.
+                <br><br><br>
+                <div>
+                 <div class="glyphicon glyphicon-cog"    style="font-size:40px;margin:0;color:#ae6665;cursor:pointer;padding:10px;" onmouseover="changeContent('software')" onmouseout="resetContent()"></div>
+                 <div class="glyphicon glyphicon-globe"  style="font-size:40px;margin:0;color:#dfba54;cursor:pointer;padding:10px;" onmouseover="changeContent('website')" onmouseout="resetContent()"></div>
+                 <div class="glyphicon glyphicon-signal" style="font-size:35px;margin:0;color:#bfdf54;cursor:pointer;padding:10px;" onmouseover="changeContent('internet')" onmouseout="resetContent()"></div>
+                 <div class="glyphicon glyphicon-hdd"    style="font-size:35px;margin:0;color:#2AB0C5;cursor:pointer;padding:10px;" onmouseover="changeContent('hardware')" onmouseout="resetContent()"></div>
+                </div>
+                 <!-- <img src = "./img/ig.png" width="40px" class="iconhover"> -->
+              </h4>
+              <div class="wow fadeIn" data-wow-duration="3s" id="contentPortfolio">
+                 <h4>
+                    Not only software and website
+                    <br> we also work in computer networks and 
+                    <br>hardware procurement. 
+                 </h4>
+              </div>
+            </center>
+              <hr>
+          </div>
+
+          <div class="col-md-12">
+            <div class="wow fadeIn"  data-wow-duration="3s" style="text-align:center;">            
+              <h4>
+                <!-- Feel free to see some <strong>Project</strong> that we have made -->
+                <br><br><br>
               </h4>
 
               @include('frontend.viewPortofolio')
@@ -180,26 +201,51 @@
       // AJAX POP UP
       function detailpopup(x){
         $("#titledetail").html("Popup #"+x);
+        $(".owl-demo").trigger('autoplay.play.owl',[1000]);
       }
 
       // SLIDER
       $(document).ready(function() {
-       
         $(".owl-demo").owlCarousel({
-       
             navigation : true, // Show next and prev buttons
             slideSpeed : 300,
             paginationSpeed : 400,
-            singleItem:true
-       
+            singleItem:true,
+            loop:true,
+            autoplay:true,
+            autoplayTimeout:1000,
+            autoplayHoverPause:true
             // "singleItem:true" is a shortcut for:
             // items : 1, 
             // itemsDesktop : false,
             // itemsDesktopSmall : false,
             // itemsTablet: false,
             // itemsMobile : false
-       
         });
-       
       });
+
+
+        function changeContent(x){
+            $("#contentPortfolio").addClass("zoomOutanimation");
+            setTimeout(function() {
+                $("#contentPortfolio").removeClass("zoomOutanimation");
+                $.post("data/viewProduct.php", { work:x },
+          function(result) { 
+             $("#contentPortfolio").html(result);
+            }
+          );
+            }, 200); // every 5 sec
+        }
+            
+       function resetContent(){
+            $("#contentPortfolio").addClass("zoomOutanimation");
+            setTimeout(function() {
+                $("#contentPortfolio").removeClass("zoomOutanimation");
+                $.post("data/viewProduct.php", { work:"default" },
+          function(result) { 
+             $("#contentPortfolio").html(result);
+            }
+          );
+            }, 200); // every 5 sec
+        }
   </script>
