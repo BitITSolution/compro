@@ -20,7 +20,7 @@ class controller_compro extends Controller {
 
 	public function index()
 	{
-		$model_cmpInfo = model_cmpinfo::all()->toArray();
+		$model_cmpInfo = model_cmpinfo::all(['info_key','info_value'])->toArray();
 
 		return view('backend.compro.index')->with([
 				'model_cmpInfo'	=> $model_cmpInfo
@@ -28,27 +28,32 @@ class controller_compro extends Controller {
 	}
 	//endregion
 
-	//region getEditorData
-
-	/**
-	 * Datatables : untuk mendapatkan data compInfo
-	 */
-
-	public function getEditorData()
+	public function editCompro()
 	{
-		include_once( app_path()."/Includes/DataTables/PHP/DataTables.php" );
-
-		Editor::inst( $db, 'cmp_info', 'info_key')
-			->fields(
-				Field::inst( 'info_key' )->validator( 'Validate::notEmpty' ),
-				Field::inst( 'info_value' )->validator( 'Validate::notEmpty' )
-			)
-			->process( $_POST )
-			->json();
+		if($_POST['_type'] == 1)
+		{
+			$model_cmpInfo = new model_cmpinfo();
+		}else if($_POST['_type'] == 2){
+			$model_cmpInfo = model_cmpinfo::find($_POST['info_firstKey']);
+		}
+		$model_cmpInfo['info_key'] = $_POST['info_key'];
+		$model_cmpInfo['info_value'] = $_POST['info_value'];
+		$model_cmpInfo->save();
+		return redirect('/backend/compro');
 	}
-	//endregion
 
-	public function testing()
+	public function getData()
+	{
+		$model_cmpInfo = model_cmpinfo::all(['info_key','info_value'])->toArray();
+		$data = array();
+		$data['draw'] = intval( $_REQUEST['draw'] );
+		$data['recordsTotal'] = count($model_cmpInfo);
+		$data['recordsFiltered'] = count($model_cmpInfo);
+		$data['data'] = $model_cmpInfo;
+		return json_encode($data);
+	}
+
+	public function tes()
 	{
 		dd($_POST);
 	}

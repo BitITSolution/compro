@@ -19,6 +19,20 @@
 	<![endif]-->
 </head>
 <body>
+<div class="popup-overlay">
+    <div class="popup-box">
+        <div class="popup-header">
+            @yield('popup-header')
+        </div>
+        <div class="popup-body">
+            @yield('popup-body')
+        </div>
+        <div class="popup-buttons">
+            @yield('popup-buttons')
+            <div class="cb"></div>
+        </div>
+    </div>
+</div>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -71,11 +85,10 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	{!! Html::style('js/DataTable/media/css/jquery.dataTables.min.css') !!}
 	{!! Html::style('js/DataTable/media/css/dataTables.tableTools.css') !!}
-	{!! Html::style('js/DataTable/media/css/dataTables.editor.min.css') !!}
 
+	{!! Html::script('js/main.js'); !!}
 	{!! Html::script('js/DataTable/media/js/jquery.dataTables.min.js'); !!}
 	{!! Html::script('js/DataTable/media/js/dataTables.tableTools.min.js'); !!}
-	{!! Html::script('js/DataTable/media/js/dataTables.editor.min.js'); !!}
 
 	@yield('content')
 	@yield('page-script')

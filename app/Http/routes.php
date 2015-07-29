@@ -14,9 +14,10 @@
   #region Backend
     Route::group(['prefix' => 'backend'], function () {
       Route::get('compro', 'Backend\controller_compro@index');
-      Route::get('compro/getEditorData', 'Backend\controller_compro@getEditorData');
-      Route::post('compro/getEditorData', 'Backend\controller_compro@getEditorData');
-    });  
+      Route::post('compro', 'Backend\controller_compro@editCompro');
+      Route::get('compro/getData', 'Backend\controller_compro@getData');
+      Route::post('compro/getData', 'Backend\controller_compro@getData');
+    });
   #endregion
 
 	#region Client
