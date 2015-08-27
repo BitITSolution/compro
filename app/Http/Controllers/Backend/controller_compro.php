@@ -13,6 +13,7 @@ use
 	DataTables\Editor\Join,
 	DataTables\Editor\Upload,
 	DataTables\Editor\Validate;
+use Illuminate\Validation\Validator;
 
 class controller_compro extends Controller {
 
@@ -28,29 +29,31 @@ class controller_compro extends Controller {
 	}
 	//endregion
 
-	public function editCompro()
+	public function editCompro(Request $request)
 	{
-		if($_POST['_type'] == 1)
-		{
-			$model_cmpInfo = new model_cmpinfo();
-		}else if($_POST['_type'] == 2){
+		$err = array();
+		if ($_POST['_type'] == 3) {
 			$model_cmpInfo = model_cmpinfo::find($_POST['info_firstKey']);
+			$model_cmpInfo->delete();
+		}else{
+			if ($_POST['_type'] == 1) {
+				$model_cmpInfo = new model_cmpinfo();
+				if(model_cmpinfo::find($_POST['info_key']))
+				{
+					$err[] = 'Key "'.$_POST['info_key'].'" telah digunakan';
+				}else{
+					$model_cmpInfo['info_key'] = $_POST['info_key'];
+					$model_cmpInfo['info_value'] = $_POST['info_value'];
+					$model_cmpInfo->save();
+				}
+			} else if ($_POST['_type'] == 2) {
+				$model_cmpInfo = model_cmpinfo::find($_POST['info_firstKey']);
+				$model_cmpInfo['info_key'] = $_POST['info_key'];
+				$model_cmpInfo['info_value'] = $_POST['info_value'];
+				$model_cmpInfo->save();
+			}
 		}
-		$model_cmpInfo['info_key'] = $_POST['info_key'];
-		$model_cmpInfo['info_value'] = $_POST['info_value'];
-		$model_cmpInfo->save();
-		return redirect('/backend/compro');
-	}
-
-	public function getData()
-	{
-		$model_cmpInfo = model_cmpinfo::all(['info_key','info_value'])->toArray();
-		$data = array();
-		$data['draw'] = intval( $_REQUEST['draw'] );
-		$data['recordsTotal'] = count($model_cmpInfo);
-		$data['recordsFiltered'] = count($model_cmpInfo);
-		$data['data'] = $model_cmpInfo;
-		return json_encode($data);
+		return redirect('/backend/compro')->withErrors($err);
 	}
 
 	public function tes()

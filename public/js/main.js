@@ -12,10 +12,16 @@ $(document).mouseup(function (e)
     }
 });
 
-function openPopup()
+function openPopup(id)
 {
-    $(".popup-overlay").fadeIn();
-    $(".popup-box").fadeIn();
+    $(".popup-box").hide();
+    if (typeof id === "undefined" || id === null) {
+        $(".popup-overlay").fadeIn();
+        $(".popup-box").fadeIn();
+    }else{
+        $(".popup-overlay").fadeIn();
+        $("#"+id).fadeIn();
+    }
 }
 function closePopup()
 {

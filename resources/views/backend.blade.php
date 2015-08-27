@@ -19,20 +19,7 @@
 	<![endif]-->
 </head>
 <body>
-<div class="popup-overlay">
-    <div class="popup-box">
-        <div class="popup-header">
-            @yield('popup-header')
-        </div>
-        <div class="popup-body">
-            @yield('popup-body')
-        </div>
-        <div class="popup-buttons">
-            @yield('popup-buttons')
-            <div class="cb"></div>
-        </div>
-    </div>
-</div>
+@yield('popup')
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
