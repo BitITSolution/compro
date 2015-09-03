@@ -16,25 +16,9 @@
       Route::get('compro', 'Backend\controller_compro@index');
       Route::post('compro/editCompro', 'Backend\controller_compro@editCompro');
       Route::post('compro', 'Backend\controller_compro@editCompro');
-      /*Route::post('compro/editCompro', function()
-	    {
-		  /*$rules = [
-			  'info_key'=>'required',
-			  'info_value'=>'required'
-		  ];
-
-		  $validator = Validator::make(Input::all(), $rules);
-
-		  if ($validator->fails())
-		  {
-		  	return redirect('backend/compro')->withErrors($validator);
-		  }
-			return redirect('backend/compro');
-	    });*/
-      Route::get('compro/getData', 'Backend\controller_compro@getData');
-      Route::post('compro/getData', 'Backend\controller_compro@getData');
 
 	  Route::get('portfolio', 'Backend\controller_portfolio@index');
+	  Route::post('portfolio/editPortfolio', 'Backend\controller_portfolio@editPortfolio');
 	  Route::post('portfolio', 'Backend\controller_portfolio@editPortfolio');
     });
   #endregion

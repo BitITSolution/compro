@@ -6,7 +6,7 @@
         <h2>Project Planner</h2>
         {!! Form::open(array(
                         'method'    => 'POST',
-                        'action'    => 'controller_message@submitProjectPlanner'
+                        'action'    => 'controller_frontend@submitPlanner'
                         )) !!}
         <div class="panel panel-default">
         	  <div class="panel-heading">

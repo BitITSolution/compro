@@ -55,7 +55,7 @@
                             <span class="hidden-sm" style="margin-left: 6px;">OK</span>
                         </button>
                     </div>
-                    <div class="btn-group fr" style="margin-right: 10px;">
+                    <div class="btn-group fr" onclick="closePopup()" style="margin-right: 10px;">
                         <button type="button" class="btn btn-danger btn-sm">
                             <span class="glyphicon glyphicon-remove"></span>
                             <span class="hidden-sm" style="margin-left: 6px;">Cancel</span>

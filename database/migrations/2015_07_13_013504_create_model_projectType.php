@@ -14,8 +14,9 @@ class CreateModelProjectType extends Migration {
 	{
 		Schema::create('project_type', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->string('name',100);
+			$table->increments('project_type_id');
+			$table->string('project_type_name',100);
+			$table->tinyInteger('project_type_status')->default(1);
 			$table->timestamps();
 		});
 	}

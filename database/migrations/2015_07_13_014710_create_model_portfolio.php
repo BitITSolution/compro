@@ -14,9 +14,10 @@ class CreateModelPortfolio extends Migration {
 	{
 		Schema::create('portfolio', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->string('name');
-			$table->text('description');
+			$table->increments('portfolio_id');
+			$table->string('portfolio_name');
+			$table->text('portfolio_description');
+			$table->tinyInteger('portfolio_status')->default(1);
 			$table->timestamps();
 
 		});

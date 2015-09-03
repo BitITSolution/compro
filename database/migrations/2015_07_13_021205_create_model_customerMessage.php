@@ -15,23 +15,24 @@ class CreateModelCustomerMessage extends Migration {
 
 		Schema::create('customer_message', function(Blueprint $table)
 			{
-				$table->increments('id');
-				$table->string('name');
-				$table->text('address');
-				$table->string('email');
-				$table->unsignedInteger('projectType_id');
-				$table->text('description');
-				$table->dateTime('start_date');
-				$table->dateTime('end_date');
-				$table->text('budget');
+				$table->increments('message_id');
+				$table->string('message_name');
+				$table->text('message_address');
+				$table->string('message_email');
+				$table->unsignedInteger('project_type_id');
+				$table->text('message_description');
+				$table->dateTime('message_start_date');
+				$table->dateTime('message_end_date');
+				$table->text('message_budget');
 				$table->tinyInteger('message_type');
+				$table->tinyInteger('message_status')->default(1);
 				$table->timestamps();
 			});
 
 		Schema::table('customer_message', function(Blueprint $table)
 			{
-				$table->foreign('projectType_id')
-					->references('id')
+				$table->foreign('project_type_id')
+					->references('project_type_id')
 					->on('project_type')
 					->onDelete('cascade');
 			});

@@ -14,17 +14,18 @@ class CreateModelPortfolioImage extends Migration {
 	{
 		Schema::create('portfolio_image', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->string('title');
-			$table->text('description');
+			$table->increments('portfolio_image_id');
+			$table->string('portfolio_image_title');
+			$table->text('portfolio_image_description');
 			$table->unsignedInteger('portfolio_id');
+			$table->tinyInteger('portfolio_image_status')->default(1);
 			$table->timestamps();
 		});
 
 		Schema::table('portfolio_image', function(Blueprint $table)
 		{
 			$table->foreign('portfolio_id')
-				->references('id')
+				->references('portfolio_id')
 				->on('portfolio')
 				->onDelete('cascade');
 		});

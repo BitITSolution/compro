@@ -4,17 +4,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class model_customer_message extends Model {
 	protected $table = 'customer_message';
-	protected $primaryKey = 'id';
+	protected $primaryKey = 'message_id';
 	protected $fillable = 	[
-		'name',
-		'address',
-		'email',
-		'description',
-		'start_date',
-		'end_date',
-		'budget',
+		'message_name',
+		'message_address',
+		'message_email',
+		'message_description',
+		'message_start_date',
+		'message_end_date',
+		'message_budget',
 		'message_type',
-		'projectType_id'
+		'message_status',
+		'project_type_id'
 	];
 
 }

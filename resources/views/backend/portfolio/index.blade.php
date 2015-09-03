@@ -1,43 +1,78 @@
 @extends('backend')
 
-
-@section('popup-header')
-    Form Edit Data
-@endsection
-
-@section('popup-body')
-    <form id="form-popup" class="form-horizontal" action="{{{ action('Backend\controller_compro@editCompro') }}}" method="post" role="form" enctype="multipart/form-data">
-        <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-        <input type="hidden" name="_type" id="_type" value="" />
-        <input type="hidden" name="id" id="id" value="" />
-    	<div class="form-group">
-    		<label class="control-label col-sm-2" for="info_key">Name : </label>
-    		<div class="col-sm-10">
-    		    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your information key">
-    		</div>
-    	</div>
-    	<div class="form-group">
-    		<label class="control-label col-sm-2" for="info_value">Description : </label>
-    		<div class="col-sm-10">
-    		    <textarea class="form-control" name="description" id="description" placeholder="Enter your description"></textarea>
-    		</div>
-    	</div>
-    	<div class="form-group">
-    	    <label class="control-label col-sm-2" for="upload">Upload images :</label>
-    	    <div class="col-sm-10">
-    	        <input type="file" name="upload" id="upload" />
-    	    </div>
-    	</div>
-@endsection
-
-@section('popup-buttons')
-        <div class="btn-group fr" onclick="$('#form-popup').submit()">
-            <button type="submit" class="btn btn-primary btn-sm">
-                <span class="glyphicon glyphicon-ok"></span>
-                <span class="hidden-sm" style="margin-left: 6px;">Submit</span>
-            </button>
+@section('popup')
+<div class="popup-overlay">
+    <div class="popup-box" id="popup-edit">
+        <div class="popup-header">
+            Form Edit Data
         </div>
-    </form>
+        <div class="popup-body">
+            <form id="form-popup-edit" class="form-horizontal" action="{{{ action('Backend\controller_portfolio@editPortfolio') }}}" method="post" role="form">
+                <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+                <input type="hidden" name="_type" id="_type" value="" />
+                <input type="hidden" name="portfolio_id" id="edit_key" value="" />
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Name : </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="portfolio_name" id="name" placeholder="Enter name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Description : </label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" name="portfolio_description" id="description" placeholder="Enter description"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="upload">Upload images :</label>
+                    <div class="col-sm-10">
+                        <input type="file" name="upload" id="upload" />
+                    </div>
+                </div>
+                <div class="popup-buttons">
+                    <div class="btn-group fr" onclick="$('#form-popup-edit').submit()">
+                        <button type="submit" class="btn btn-success btn-sm">
+                            <span class="glyphicon glyphicon-ok"></span>
+                            <span class="hidden-sm" style="margin-left: 6px;">Submit</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="cb"></div>
+        </div>
+    </div>
+
+    <div class="popup-box" id="popup-delete">
+        <div class="popup-header"></div>
+        <div class="popup-body">
+            <form id="form-popup-delete" class="form-horizontal" action="{{{ action('Backend\controller_portfolio@editPortfolio') }}}" method="post" role="form">
+                <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+                <input type="hidden" name="_type" value="3" />
+                <input type="hidden" name="portfolio_id" id="delete_key" value="" />
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        Are you sure wants to delete this item?
+                    </div>
+                </div>
+                <div class="popup-buttons">
+                    <div class="btn-group fr" onclick="$('#form-popup-delete').submit()">
+                        <button type="submit" class="btn btn-success btn-sm">
+                            <span class="glyphicon glyphicon-ok"></span>
+                            <span class="hidden-sm" style="margin-left: 6px;">OK</span>
+                        </button>
+                    </div>
+                    <div class="btn-group fr" onclick="closePopup()" style="margin-right: 10px;">
+                        <button type="button" class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove"></span>
+                            <span class="hidden-sm" style="margin-left: 6px;">Cancel</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="cb"></div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('content')
@@ -69,25 +104,25 @@
                             {{--<td></td>--}}
                             <td>
                                 <div class="btn-group"
-                                onclick='popupFormEdit(
-                                    "{{{ $portfolio['id'] }}}",
-                                    "{{{ $portfolio['name'] }}}",
-                                    "{{{ $portfolio['description'] }}}"
+                                onclick='popupEdit(
+                                    "{{{ $portfolio['portfolio_id'] }}}",
+                                    "{{{ $portfolio['portfolio_name'] }}}",
+                                    "{{{ $portfolio['portfolio_description'] }}}"
                                     )'>
                                     <button type="button" class="btn btn-primary btn-xs">
                                         <span class="glyphicon glyphicon-edit"></span>
                                         <span class="hidden-xs" style="margin-left: 6px;">Edit</span>
                                     </button>
                                 </div>
-                                <div class="btn-group" style="margin-left: 5px;">
+                                <div class="btn-group" style="margin-left: 5px;" onclick='popupDelete("{{{ $portfolio['portfolio_id'] }}}")'>
                                     <button type="button" class="btn btn-danger btn-xs">
                                         <span class="glyphicon glyphicon-trash"></span>
                                         <span class="hidden-xs" style="margin-left: 5px;">Delete</span>
                                     </button>
                                 </div>
                             </td>
-                            <td>{!! $portfolio['name'] !!}</td>
-                            <td>{!! $portfolio['description'] !!}</td>
+                            <td>{!! $portfolio['portfolio_name'] !!}</td>
+                            <td>{!! $portfolio['portfolio_description'] !!}</td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -117,6 +152,10 @@
 			content: "";
 		}*/
 
+        #dtcustom
+        {
+            display: inline-block;
+        }
 	</style>
 
 	<script type="text/javascript">
@@ -129,24 +168,33 @@
                 }
             );
             $( "div#dtcustom" ).html(
-                '<div onclick="popupFormSave()" class="btn-group" style="margin-left:10px;"><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil"></span>&nbsp; New Data</button></div>'
+                '<div onclick="popupSave()" class="btn-group" style="margin-left:10px;"><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil"></span>&nbsp; New Data</button></div>'
             );
         } );
 
-        function popupFormEdit(id, name, description)
+        function popupEdit(id, name, description)
         {
             $('.popup-header').html('Form Edit Data');
             $("#_type").val('2');
+            $("#edit_key").val(id);
             $("#name").val(name);
             $("#description").val(description);
-            openPopup();
+            openPopup("popup-edit");
         }
 
-        function popupFormSave()
+        function popupSave()
         {
             $('.popup-header').html('Form New Data');
+            $("#edit_key").val("");
             $("#_type").val('1');
-            openPopup();
+            openPopup("popup-edit");
         }
+
+		function popupDelete(key)
+		{
+		    $('.popup-header').html('Form Delete Data');
+		    $("#delete_key").val(key);
+		    openPopup("popup-delete");
+		}
 	</script>
 @endsection

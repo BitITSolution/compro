@@ -14,8 +14,8 @@ class CreateModelCmpinfosTable extends Migration {
 	{
 		Schema::create('cmp_info', function(Blueprint $table)
 		{
-      $table->string('info_key');
-      $table->string('info_value',255);
+      		$table->string('info_key');
+      		$table->string('info_value',255);
 			$table->primary('info_key');
 			$table->timestamps();
 		});
