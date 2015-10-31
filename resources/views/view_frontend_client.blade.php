@@ -21,16 +21,12 @@
     <!-- ===========================
     SITE TITLE
     =========================== -->
-    <title>BITSolution</title><!-- This is what you see on your browser tab-->
+    <title>Maxel</title><!-- This is what you see on your browser tab-->
     
     <!-- ===========================
     FAVICONS
     =========================== -->
     <link rel="icon" href="img/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
      
     <!-- ===========================
     STYLESHEETS
@@ -88,18 +84,12 @@
   
    </head>
     <body data-spy="scroll" style="background:url('./img/maze.png');">
-        <!-- Preloader -->
-        <div id="preloader">           
-            <div id="status">
-                <div class="wow tada infinite" data-wow-duration="6s">BIT</div>
-            </div>
-        </div>
-        
+               
         <div id="about" class="container">
           <div class="nav">
             <ul>
               <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
-              <li class="tutorials" onclick="rotatePage('about')"><a href="#">BITSolution</a></li>
+              <li class="tutorials" onclick="rotatePage('about')"><a href="#">MAXEL</a></li>
               <li class="about" onclick="rotatePage('career')"><a href="#">Career</a></li>
               <li class="news" onclick="rotatePage('product')"><a href="#">Product</a></li>
               <li class="contact"><a class="active">Client</a></li>
@@ -110,7 +100,7 @@
           <div class="col-md-1"></div>
 
           <div class="col-md-10">
-            <div class="wow fadeIn"  data-wow-duration="3s" style="text-align:center;">
+            <div class="wow fadeIn"  data-wow-duration="4s" style="text-align:center;">
               <h1>
                 <br>Our <strong>Client</strong>
               </h1>
@@ -119,6 +109,7 @@
                  Awesome people we work with
                 <br>
 					@include('frontend.viewTestimonial')
+                <strong>COMING SOON</strong>
                 <br><br><br>
               </h4>
 

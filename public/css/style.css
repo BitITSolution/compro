@@ -33,6 +33,7 @@ TYPOGRAPHY
 body {
     font-family: 'Raleway', sans-serif;
     line-height: 1.8em;
+    color: black;
 }
 
 .bigicon {font-size: 3em;}
@@ -433,31 +434,31 @@ CUBE
 
 
 .cube:hover .front {
-    transform: rotateX(0deg) translateX(0px) translateY(-195px);
+    transform: rotateX(0deg) translateX(0px) translateY(-255px);
     zoom:1;
 }
 .cube:hover .topleft {
-    transform: rotateX(0deg) translateX(0px) translateY(75px);
+    transform: rotateX(0deg) translateX(0px) translateY(15px);
     zoom:1;
 }
 .cube:hover .top {
-    transform: rotateX(0deg) translateX(0px) translateY(-60px);
+    transform: rotateX(0deg) translateX(0px) translateY(-120px);
     zoom:1;
 }
 .cube:hover .bottom {
-    transform: rotateX(0deg) translateX(105px) translateY(-400px);
+    transform: rotateX(0deg) translateX(105px) translateY(-460px);
     zoom:1;
 }
 .cube:hover .left {
-    transform: rotateX(0deg) translateX(105px) translateY(-400px);
+    transform: rotateX(0deg) translateX(105px) translateY(-460px);
     zoom:1;
 }
 .cube:hover .right {
-    transform: rotateX(0deg) translateX(-105px) translateY(-670px); 
+    transform: rotateX(0deg) translateX(-105px) translateY(-730px); 
     zoom:1;
 }
 .cube:hover .back {
-    transform: rotateX(0deg) translateX(-105px) translateY(-670px);
+    transform: rotateX(0deg) translateX(-105px) translateY(-730px);
     zoom:1;
 }
 
@@ -485,6 +486,9 @@ CUBE
 /*================================
 HEXAGON HOME
 ================================*/
+.hex{
+    border:1px solid black;
+}
 .hex .corner-1,
 .hex .corner-2 {
     border:none;
@@ -633,7 +637,7 @@ HEXAGON CLIENT
 }
 
 .titlehexagon{
-    position:relative;margin-top:-160px;text-align:center;opacity: 0;font-size:15px;text-transform: uppercase;font-weight: bold;cursor: pointer;
+    position:relative;margin-top:-160px;text-align:center;opacity: 0;font-size:15px;text-transform: uppercase;font-weight: bold;cursor: pointer;color:rgba(0,0,0,0.7);
 }
 
 .texthexagon{
@@ -695,11 +699,88 @@ svg{
 }
 
 /*================================
+TESTIMONIAL CLIENT
+================================*/
+#testimonials {
+  display: block;
+  width: 100%;
+}
+#testimonials h2 {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+#testimonials .carousel-wrap {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#testimonials .carousel-nav {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+}
+#testimonials .carousel-nav img {
+  cursor: pointer;
+}
+#testimonials .carousel-nav img:active {
+  position: relative;
+  top: 1px;
+}
+#testimonials .carousel-nav .nextbtn {
+  float: right;
+}
+
+#testimonials .carousel-wrap ul {
+  display: block;
+  list-style: none;
+  position: relative;
+}
+#testimonials .carousel-wrap ul li {
+  display: block;
+  float: left;
+  position: relative;
+  width: 400px;
+  margin-right: 15px;
+}
+
+#testimonials .carousel-wrap .context {
+  font-size: 1.2em;
+  line-height: 1.45em;
+  color: #797670;
+  font-style: italic;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+
+/*================================
 DETAIL PORTFOLIO OVERLAY FULLSCREEN
 ================================*/
 
 .fsp-close{
     font-size: 40px;
+}
+
+.popupforportfolio{
+    width: 100%; color: rgb(255, 255, 255); color:black;z-index:121230;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .popupforportfolio{
+        margin-top:100px;
+        padding-bottom: 20px;
+    }
+    .fsp-close{
+        margin-top: -50px;
+    }
+    #contentdetail{
+        overflow: hidden;
+    }
 }
 
 #slideshow { 

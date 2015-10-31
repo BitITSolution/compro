@@ -21,16 +21,12 @@
     <!-- ===========================
     SITE TITLE
     =========================== -->
-    <title>BITSolution</title><!-- This is what you see on your browser tab-->
+    <title>Maxel</title><!-- This is what you see on your browser tab-->
     
     <!-- ===========================
     FAVICONS
     =========================== -->
     <link rel="icon" href="img/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
      
     <!-- ===========================
     STYLESHEETS
@@ -68,19 +64,13 @@
   
    </head>
     <body data-spy="scroll" style="background:url('./img/maze.png');">
-        <!-- Preloader -->
-        <div id="preloader">           
-            <div id="status">
-                <div class="wow tada infinite" data-wow-duration="5s">BIT</div>
-            </div>
-        </div>
-        
+               
         <div id="about" class="container">
           <center>
                 <div class="nav">
                   <ul>
                     <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
-                    <li class="tutorials"><a class="active">BITSolution</a></li>
+                    <li class="tutorials"><a class="active">MAXEL</a></li>
                     <li class="about" onclick="rotatePage('career')"><a href="#">Career</a></li>
                     <li class="news" onclick="rotatePage('product')"><a href="#">Product</a></li>
                     <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
@@ -91,22 +81,25 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8" class="wow swing"  data-wow-duration="3s">
                     <h1>
-                      <br>We're <strong>BIT</strong>Solution
+                      <br>We're <strong><img src="img/maxel-02.png" style="width:250px;"></strong>
                     </h1>
                   
                       <div class="aboutright_header">
                         <b>
-                         <h3>Capoeira is often described as a combination of martial arts, dance and acrobratics.</h3>
+                         <h3>We craft solution for your IT Problems.</h3>
                         </b>
                       </div>
 
                       <div class="aboutright_body">
                           <br>
-                        Originally it was used as a disguished fight by the slaves who were shipped to Brazil and put to labour. They made it look like a dance, but in reality they were training their fighting skills to be able to stand up against their slave masters and fight for their freedom.
-                          <br>
-                        Since that time capoeira has developed in Brazil and nowadays there are two styles of capoeira: Capoeira Angola and Capoeira Regional.
-                          <br><br>
-                        Capoeira is played in a circle (roda). The circle consists of the 'bateria', the people playing the instruments and thereby deciding what is happening within the roda, and the rest of the capoeiristas clapping and singing along to raise the energy. There are always two people playing in the roda.
+                        Founded in 2015 and based in Surabaya, Indonesia. Maxel is IT company that develop a solution for your problem in
+                        software, hardware, website, mobile application,
+                        network, digital design and video animation
+                        <br>
+                        
+
+                        <br><br>
+                        Want our help to solve your problem or just want to know more about us, please contact us at info@maxel.id
                       </div>
                 </div>
           </center>

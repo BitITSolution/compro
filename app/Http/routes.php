@@ -39,6 +39,7 @@
     Route::get('product', 'controller_frontend@product'); //Product + portfolio
     Route::get('career',  'controller_frontend@career');
 	Route::get('contact', 'controller_frontend@contact');
+	Route::get('maxel', 'controller_frontend@maxel');
 
   #region Message (Project Planner & Message us)
   Route::get('planner', 'controller_frontend@planner');

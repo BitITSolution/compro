@@ -21,16 +21,12 @@
     <!-- ===========================
     SITE TITLE
     =========================== -->
-    <title>BITSolution</title><!-- This is what you see on your browser tab-->
+    <title>Maxel</title><!-- This is what you see on your browser tab-->
     
     <!-- ===========================
     FAVICONS
     =========================== -->
     <link rel="icon" href="img/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
      
     <!-- ===========================
     STYLESHEETS
@@ -68,19 +64,13 @@
   
    </head>
     <body data-spy="scroll" style="background:url('./img/maze.png');">
-        <!-- Preloader -->
-        <div id="preloader">           
-            <div id="status">
-                <div class="wow tada infinite" data-wow-duration="5s">BIT</div>
-            </div>
-        </div>
-        
+       
         <div id="about" class="container">
           <center>
             <div class="nav">
               <ul>
                 <li class="home" onclick="rotatePage('index')"><a href="#">Home</a></li>
-                <li class="tutorials" onclick="rotatePage('about')"><a href="#">BITSolution</a></li>
+                <li class="tutorials" onclick="rotatePage('about')"><a href="#">MAXEL</a></li>
                 <li class="about"><a class="active">Career</a></li>
                 <li class="news" onclick="rotatePage('product')"><a href="#">Product</a></li>
                 <li class="contact" onclick="rotatePage('client')"><a href="#">Client</a></li>
@@ -88,7 +78,7 @@
               </ul>
             </div>
           </center>
-          <div class="col-md-12 wow swing"  data-wow-duration="3s">
+          	<div class="col-md-12 wow swing"  data-wow-duration="2s">
             <br><br>
                 <center>
                     <h2>Open Recruitment</h2>
@@ -133,7 +123,7 @@
                       </h4>
                     </div>
                 </center>
-          </div>
+            </div>
         </div>
         @include('frontend.footer')     
     
