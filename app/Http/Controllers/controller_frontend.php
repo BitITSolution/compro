@@ -61,6 +61,11 @@ class controller_frontend extends Controller {
     return view('view_frontend_contact');//,['page'=>'contact']);
   }
 
+  public function maxel() {
+    return view('view_frontend_maxel');//,['page'=>'maxel']);
+  }
+
+
   public function planner() {
     $modelProjectType = model_project_type::all()->toArray();
     return view('view_frontend_planner')

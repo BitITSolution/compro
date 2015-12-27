@@ -27,14 +27,14 @@
 					  <br>
 					Don't know how to create a beautiful website?
 					<br><br> Someone please call ...
-					<br><strong>BIT</strong>Solution !!!
+					<br><strong>MAXEL </strong>!!!
                     </h4>";
 		echo $result;
 	}
 
 	if($work == "internet"){
 		$result .= "<h4>
-					<strong style='color:#bfdf54;'>Internet </strong>Connection
+					<strong style='color:#DFE32D;'>Internet </strong>Connection
 					<br>
 					Even your problem in love connection,
 					<br>can we handle. Wanna try?
@@ -44,7 +44,7 @@
 
 	if($work == "hardware"){
 		$result .= "<h4>
-					<strong style='color:#2AB0C5;'>Hardware </strong>Procurement
+					<strong style='color:#bfdf54;'>Hardware </strong>Procurement
 					<br>
 					  <div class='col-md-12' style='text-align:left;'>
 					  	<div class='col-md-2' style='text-align:left;'></div>
@@ -62,6 +62,32 @@
 						Ummm... Hardware ? 
 						<br><strong>Check !!</strong>
 					</div>
+                    </h4>";
+		echo $result;
+	}
+
+	if($work == "design"){
+		$result .= "<h4>
+					What would you need to make a <strong style='color:#2AB0C5;'>Digital Design </strong> ??
+					<br><br>
+					~ by yourself : <br>
+					Idea -> Tools -> Skill -> Time -> Done...
+					<br><br>
+					~ with MAXEL : <br>
+					Idea -> Share with us in <strong>Planner</strong> -> Relax.... -> Done !!!
+                    </h4>";
+		echo $result;
+	}
+
+	if($work == "video"){
+		$result .= "<h4>
+					Tell everyone about 
+					<br>
+					wedding, sweet 17<sup>th</sup>, or anything about your story 
+					<br>
+					with a <strong style='color:#9669FE;'>Video Animation</strong>
+					<br>
+					because word does not enough.
                     </h4>";
 		echo $result;
 	}

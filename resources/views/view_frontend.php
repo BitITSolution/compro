@@ -9,12 +9,8 @@
     <meta name="keywords" content="Free Portfolio Template, Free Template, Free Bootstrap Template, Dribbble Portfolio Template, Free HTML5 Template">
     <meta name="author" content="EvenFly Team">
     
-    <title>BITSolution</title>0
+    <title>Maxel</title>
     <link rel="icon" href="img/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
      
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/preloader.css">
@@ -36,7 +32,7 @@
     <body data-spy="scroll" style="background:url('./img/maze.png');">
         <div id="preloader">           
             <div id="status">
-                <div class="wow tada infinite" data-wow-duration="6s">BIT</div>
+                <div class="wow tada infinite" data-wow-duration="6s"><img src="img/favicon.png" style="width:100px;"></div>
             </div>
         </div>
         

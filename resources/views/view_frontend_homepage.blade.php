@@ -9,13 +9,9 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
     
-    <title>BITSolution</title>
+    <title>Maxel IT Solution</title>
     
     <link rel="icon" href="img/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
      
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/preloader.css">
@@ -45,31 +41,30 @@
         <!-- Preloader -->
         <div id="preloader">           
             <div id="status">
-                <div class="wow tada infinite" data-wow-duration="8s">BIT</div>
+                <div class="wow tada infinite" data-wow-duration="2s"><img src="img/favicon.png" style="width:100px;"></div>
             </div>
         </div>
         
         <div id="about" class="container">
-        <br><br>
+          <center>
+            <h1 class="wow swing" data-wow-duration="4s">
+                <strong><img src="img/maxel-02.png" style="width:350px;"></strong> 
+            </h1>
+          </center>
+          <br><br><br><br><br>
         <!-- Home -->
          <div class="col-md-12" style="height:auto;">
 	        <div class="col-md-6" style="z-index:10;">
-	         
-	          <h1 class="wow swing" data-wow-duration="4s">
-	          	<br><strong>BIT</strong>Solution 
-	          </h1>
-	             <br>
-	          <h2 class="wow bounceIn" data-wow-duration="4s">
-	          	<blockquote class="pull-right">
-				 <p style="color:black;">The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
-				 <small>by <cite>Albert Einstein</cite></small>
-				</blockquote>
+	          <h2 class="wow bounceIn" data-wow-duration="4s" style="min-height:50px;height:50px;">
+	          	<blockquote class="pull-right"id="contentDetail">
+                 <p style='color:black;'' >The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
+                 <small>by <cite>Albert Einstein</cite></small>
+				      </blockquote>
 	           </h2>
 	          <br><br>
 	        </div>
 
 	        <div class="col-md-4 col-md-offset-1 wow rotateIn" id="wrapcube" data-wow-duration="3s" style="text-align:center;">
-	         <br><br><br><br>
 	          <center>
 	        	<div class="wrap">
 					<div class="cube">
@@ -77,27 +72,27 @@
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
-            <div class="front hex" onclick="rotatePage('index')" ><br>HOME
-                <div class="corner-1"></div>
-                <div class="corner-2"></div>
-            </div>
-						<div class="top hex" onclick="rotatePage('career')"><br>CAREER
+                        <div class="front hex" onclick="rotatePage('planner')" ><br><strong>PLANNER</strong>
+                            <div class="corner-1"></div>
+                            <div class="corner-2"></div>
+                        </div>
+						<div class="top hex" onclick="rotatePage('career')" ><br><strong>KARIR</strong>
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
-						<div class="bottom hex" onclick="rotatePage('about')"><br>BITSolution
+						<div class="bottom hex" onclick="rotatePage('about')" ><br><strong>MAXEL</strong>
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
-						<div class="left hex" onclick="rotatePage('contact')"><br>CONTACT
+						<div class="left hex" onclick="rotatePage('contact')" ><br><strong>KONTAK</strong>
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
-						<div class="back hex" onclick="rotatePage('product')"><br>PRODUCT
+						<div class="back hex" onclick="rotatePage('product')" ><br><strong>PRODUK</strong>
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
-						<div class="right hex" onclick="rotatePage('client')"><br>CLIENT
+						<div class="right hex" onclick="rotatePage('client')" ><br><strong>KLIEN</strong>
 							<div class="corner-1"></div>
 							<div class="corner-2"></div>
 						</div>
@@ -107,8 +102,7 @@
 	        </div>
          </div><!-- Home SECTION END -->
 	    </div><!-- Home SECTION END -->
-	
-        <br><br><br>
+	       <br><br>
         @include('frontend.footer')
   </body>
 </html>        
@@ -158,7 +152,8 @@
         function movePage(x){
             $("html").addClass("rotate360cw");
             setTimeout(function() {
-                window.location = x + "";
+                //window.location = x + "";
+                window.location = "maxel";
             }, 300); // every 5 sec
         }
 
@@ -171,5 +166,42 @@
                 $(".cube").removeClass("pointerevent");
             }, 1000);
             halaman="";
+
           });
+
+        $( ".front" ).mouseenter(function() {
+          showDetail("planner");
+        });
+
+        $( ".back" ).mouseenter(function() {
+          showDetail("product");
+        });
+
+        $( ".top" ).mouseenter(function() {
+          showDetail("career");
+        });
+
+        $( ".bottom" ).mouseenter(function() {
+          showDetail("maxel");
+        });
+
+        $( ".left" ).mouseenter(function() {
+          showDetail("contact");
+        });
+
+        $( ".right" ).mouseenter(function() {
+          showDetail("client");
+        });
+
+        function showDetail(x){
+            $("#contentDetail").fadeOut(100);
+            setTimeout(function() {
+                $.post("data/viewDetailHome_indo.php", { work:x },
+                  function(result) { 
+                     $("#contentDetail").html(result);
+                     $("#contentDetail").fadeIn(100);
+                    }
+                  );
+            }, 50); 
+        }
     </script>
